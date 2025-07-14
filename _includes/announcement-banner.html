@@ -1,0 +1,9 @@
+{% if site.announcement %}
+<div class="announcement-banner">
+  <div class="wrapper">
+    <div class="announcement-content">
+      {{ site.announcement | markdownify }}
+    </div>
+  </div>
+</div>
+{% endif %} 
