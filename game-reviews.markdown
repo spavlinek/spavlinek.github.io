@@ -4,7 +4,7 @@ title: Game Reviews
 permalink: /game-reviews/
 ---
 
-Welcome to my game reviews section where I share analysis and critiques of games I've played. I focus on design mechanics, player experience, and what makes each game unique.
+Welcome to my game reviews section where I share analysis and critiques of some of the games I've played. So far I've focused on educational games and table-top roleplaying games, but I'm excited to write more.
 
 ## Recent Game Reviews
 
