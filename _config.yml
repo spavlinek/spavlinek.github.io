@@ -19,8 +19,9 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Sara Pavlinek
-profile_picture: /assets/images/profile.jpg
+profile_picture: /assets/images/profile_pic_sqaure.png
 email: spavline@andrew.cmu.edu
+version: 20250716-2310
 description: >- # this means to ignore newlines until "baseurl:"
   Sara Pavlinek's personal website
 baseurl: "" # the subpath of your site, e.g. /blog

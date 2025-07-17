@@ -2,9 +2,6 @@
   <div class="wrapper">
     <div class="site-header-content">
       <div class="site-branding">
-        {% if site.profile_picture %}
-        <img src="{{ site.profile_picture | relative_url }}" alt="{{ site.title }}" class="profile-picture">
-        {% endif %}
         <div class="site-title-text">
           <a class="site-title" href="{{ "/" | relative_url }}">
             {{ site.title | escape }}

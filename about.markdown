@@ -30,11 +30,6 @@ I'm actively involved in research, currently working as a Research Assistant at 
 ### Game Design
 I create games that challenge players to think differently and engage with innovative mechanics. My game design projects include developing digital games such as "Flytrap Adventures," a 2D platformer set in a dynamic greenhouse environment, or a custom Python-base Sudoku, as well as transformational physical games meant to teach about the environment.
 
-## Technical Expertise
-
-**Programming Languages:** Python, C, Swift, C++, SML, Processing, JavaScript, HTML, R, Flutter  
-**Software/Tools:** XCode, Android Studio, Unity, Figma, Latex  
-**Specializations:** Machine Learning, Computer Graphics, HCI, Game Design, Data Analysis
 
 ## Beyond Work
 
