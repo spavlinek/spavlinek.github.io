@@ -19,9 +19,9 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Sara Pavlinek
-profile_picture: /assets/images/profile_pic_sqaure.png
+profile_picture: /assets/images/profile_pic_square.png
 email: spavline@andrew.cmu.edu
-version: 20250716-2310
+version: 999999999d
 description: >- # this means to ignore newlines until "baseurl:"
   Sara Pavlinek's personal website
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -31,10 +31,13 @@ github_username:  spavlinek
 # Navigation
 header_pages:
   - about.markdown
-  - work.markdown
+  - projects.markdown
   - game-reviews.markdown
   - resume.markdown
-  - contact.markdown
+
+# Social Media Links
+linkedin_url: https://linkedin.com/in/sara-pavlinek-cs
+github_url: https://github.com/spavlinek
 
 # Build settings
 theme: minima

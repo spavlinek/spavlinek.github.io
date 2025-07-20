@@ -2,6 +2,8 @@
 layout: page
 title:
 permalink: /research/
+hide_title: true
+
 ---
 
 I'm actively engaged in research that explores the intersection of artificial intelligence, human-computer interaction, and educational technology. My work focuses on understanding how AI systems can better support learning and how interactive technologies can enhance human experiences.
@@ -61,6 +63,4 @@ As a **Teaching Assistant for Fundamentals of Programming (Python)**, I support 
 
 ---
 
-**Interested in research collaboration?** [Contact me](/contact/) to discuss potential projects or partnerships.
-
-For detailed information about specific projects, visit my [research work page](/work/research/). 
+For detailed information about specific projects, visit my [research work page](/projects/research/). 

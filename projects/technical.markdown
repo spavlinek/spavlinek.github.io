@@ -1,14 +1,15 @@
 ---
 layout: page
-title: Technical Work
-permalink: /work/technical/
+title: Technical Projects
+permalink: /projects/technical/
+hide_title: true
+
 ---
 
-# Technical Work
+# Technical Projects
 
 Here you'll find a collection of my software development, research, and technical projects spanning mobile apps, web development, and computational biology.
 
-## Featured Work
 
 ### Simulated Facial Expression Generation Project
 *Technologies: Python, PyQt5*  
@@ -65,30 +66,5 @@ Analyzing conversational data using OpenAI's Whisper to extract insights about A
 
 Developing an augmented reality balancing game that utilizes computer vision for real-time interaction. The project explores applications of AR in physical activity and skill development.
 
-## Skills & Technologies
-
-### Programming Languages
-Python, C, Swift, C++, SML, Processing, JavaScript, HTML, R, Flutter
-
-### Frameworks & Libraries
-- **Mobile Development:** Flutter, Swift (iOS), Android Studios
-- **Web Development:** HTML/CSS/JavaScript, API integration
-- **Data Analysis:** R, Python libraries
-- **UI/UX:** PyQt5, Figma
-
-### Tools & Platforms
-- **Development:** XCode, Android Studio, Unity
-- **Design:** Figma, Latex
-- **Systems:** Linux, version control
-- **Research:** OpenAI Whisper, data analysis pipelines
-
-### Specializations
-- Human-Computer Interaction
-- Mobile App Development
-- Data Analysis & Visualization
-- Computer Vision & AR
-- Research Software Development
 
 ---
-
-*Interested in collaborating on a technical project? Feel free to [reach out](/contact/)!* 

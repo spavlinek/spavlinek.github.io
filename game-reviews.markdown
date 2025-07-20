@@ -2,9 +2,11 @@
 layout: page
 title: Game Reviews
 permalink: /game-reviews/
+hide_title: true
 ---
+# Game Reviews
 
-Welcome to my game reviews section where I share analysis and critiques of some of the games I've played. So far I've focused on educational games and table-top roleplaying games, but I'm excited to write more.
+Welcome to my game reviews section where I share analysis and critiques I wrote for some of my game design classes at CMU. So far I've focused on educational games and table-top roleplaying games, but I'm excited to add more games to this collection. After all, the more (different) games you play, the better of a game designer do you become.
 
 ## Recent Game Reviews
 

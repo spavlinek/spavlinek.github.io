@@ -1,5 +1,201 @@
 <!-- Custom CSS -->
-<link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}?v={{ site.version }}&t={{ 'now' | date: '%s' }}">
+<link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}?v={{ site.version }}&t={{ 'now' | date: '%s' }}&nocache=true&bust=67890">
+
+<!-- FINAL NAVIGATION SPACING CSS -->
+<style>
+.site-header {
+  background: var(--background-color) !important;
+}
+.site-header .wrapper {
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 1rem !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+.site-header .wrapper .site-header-content {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  gap: 2rem !important;
+  width: 100% !important;
+  min-height: 60px !important;
+}
+.site-header .wrapper .site-header-content .site-branding {
+  margin-right: auto !important;
+  flex-shrink: 0 !important;
+}
+.site-header .wrapper .site-header-content .site-nav {
+  margin-left: auto !important;
+  flex-shrink: 0 !important;
+  margin-right: 0 !important;
+  padding-right: 0.5rem !important;
+}
+/* Desktop navigation - horizontal links */
+.site-header .wrapper .site-header-content .site-nav .trigger {
+  display: flex !important;
+  gap: 0.5rem !important;
+  align-items: center !important;
+}
+
+/* Hide hamburger menu on larger screens */
+.site-nav .nav-trigger {
+  display: none !important;
+}
+.site-nav .menu-icon {
+  display: none !important;
+}
+
+/* Responsive navigation for smaller screens */
+@media screen and (max-width: 768px) {
+  .site-header .wrapper .site-header-content {
+    gap: 1rem !important;
+  }
+  
+  /* Position nav relative for dropdown positioning */
+  .site-nav {
+    position: relative !important;
+  }
+  
+  /* Style the hamburger button label - this creates the single rectangle */
+  .site-header .site-nav label[for="nav-trigger"] {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 8px !important;
+    cursor: pointer !important;
+    width: 40px !important;
+    height: 40px !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 0.25rem !important;
+    background: var(--background-color) !important;
+    transition: all 0.2s ease !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+  }
+  
+  .site-header .site-nav label[for="nav-trigger"]:hover {
+    background: var(--background-alt) !important;
+  }
+  
+  /* Make menu-icon span completely invisible - no dimensions, no background */
+  .site-header .site-nav .menu-icon {
+    display: contents !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    background: none !important;
+    width: auto !important;
+    height: auto !important;
+  }
+  
+  /* Center the SVG inside the hamburger */
+  .site-nav .menu-icon svg {
+    width: 18px !important;
+    height: 15px !important;
+    fill: var(--text-color) !important;
+    display: block !important;
+  }
+  
+  /* HIDE navigation links completely by default in mobile - use stronger selector */
+  .site-header .site-nav .trigger {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    position: absolute !important;
+    top: 100% !important;
+    right: 0 !important;
+    background: var(--background-color) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 0.375rem !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+    padding: 1rem !important;
+    min-width: 200px !important;
+    z-index: 100 !important;
+    margin-top: 0.5rem !important;
+    transform: translateY(-10px) !important;
+    transition: all 0.2s ease !important;
+  }
+  
+  /* Show navigation when hamburger is checked - use stronger selector */
+  .site-header .site-nav .nav-trigger:checked ~ .trigger {
+    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+    align-items: stretch !important;
+    position: absolute !important;
+    top: 100% !important;
+    right: 0 !important;
+    background: var(--background-color) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 0.375rem !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+    padding: 1rem !important;
+    min-width: 200px !important;
+    z-index: 100 !important;
+    margin-top: 0.5rem !important;
+  }
+  
+  /* Style dropdown navigation links */
+  .site-header .site-nav .nav-trigger:checked ~ .trigger .page-link {
+    padding: 0.75rem 1rem !important;
+    border-radius: 0.25rem !important;
+    text-align: left !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    height: auto !important;
+    display: block !important;
+  }
+  
+  .site-header .site-nav .nav-trigger:checked ~ .trigger .page-link:hover {
+    background: var(--background-alt) !important;
+  }
+}
+
+/* Hide page titles when hide_title is set */
+.hide-page-title .page-content .wrapper > h1:first-child,
+.hide-page-title .post-header h1.post-title {
+  display: none !important;
+}
+</style>
+
+<!-- JavaScript for mobile navigation and title hiding -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const navTrigger = document.getElementById('nav-trigger');
+  
+  if (navTrigger) {
+    // Close dropdown when clicking navigation links
+    document.querySelectorAll('.site-nav .page-link').forEach(function(link) {
+      link.addEventListener('click', function() {
+        navTrigger.checked = false;
+      });
+    });
+    
+    // Close dropdown when clicking outside navigation
+    document.addEventListener('click', function(event) {
+      const siteNav = document.querySelector('.site-nav');
+      if (!siteNav.contains(event.target) && navTrigger.checked) {
+        navTrigger.checked = false;
+      }
+    });
+  }
+  
+
+});
+</script>
+
+{% if page.hide_title %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.body.classList.add('hide-page-title');
+});
+</script>
+{% endif %}
 
 <!-- Additional meta tags -->
 <meta name="viewport" content="width=device-width, initial-scale=1">

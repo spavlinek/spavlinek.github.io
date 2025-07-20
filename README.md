@@ -42,7 +42,7 @@ Update the following files with your information:
 ### Projects
 Add your projects to:
 - `projects/technical.markdown` - Software and technical projects
-- `projects/game-design.markdown` - Game design work
+- `projects/game-design.markdown` - Game design projects
 
 ### Blog Posts
 Create new blog posts in the `_posts/` directory with the format:
