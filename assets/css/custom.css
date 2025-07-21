@@ -27,6 +27,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  position: relative;
+  padding-bottom: 120px; /* enough space for minigame row */
 }
 
 .landing-content {
@@ -35,6 +37,7 @@
   z-index: 2;
   text-align: left;
   margin-top: -50vh;
+  margin-bottom: 0;
 }
 
 .landing-content h1 {
@@ -55,8 +58,8 @@
 .main-content {
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
+  margin: -2rem auto 0 auto;
+  padding: 0rem 1rem 2rem 1rem;
   background: var(--background-color);
   box-sizing: border-box;
 }
@@ -1166,4 +1169,209 @@ code, pre {
   .what-i-do-item h3 {
     font-size: 1.25rem;
   }
+}
+
+/* Garden Container Styles */
+.garden-container {
+  position: absolute;
+  bottom: 30vh;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0;
+  padding: 0;
+  z-index: 1;
+}
+
+.planter {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.earth {
+  width: 60px;
+  height: 60px;
+  background-image: url('/assets/images/earth.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+}
+
+.plant {
+  position: absolute;
+  bottom: 80px; /* Position above the earth */
+  width: 40px;
+  height: 40px;
+  background-image: url('/assets/images/plant.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.5s ease;
+  transform: translateY(100%);
+  opacity: 0;
+  z-index: 2;
+}
+
+.pot {
+  position: absolute;
+  bottom: 60px; /* Position at the same level as earth, covering the plant */
+  width: 50px;
+  height: 30px;
+  background-image: url('/assets/images/pot.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.5s ease;
+  z-index: 3;
+}
+
+/* Hover effects */
+.planter:hover .plant {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .garden-container {
+    gap: 0;
+    padding: 0;
+  }
+  
+  .earth {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .plant {
+    width: 35px;
+    height: 35px;
+    bottom: 50px;
+  }
+  
+  .pot {
+    width: 40px;
+    height: 25px;
+    bottom: 50px;
+  }
+}
+
+.minigame-row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 0.5rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+}
+
+.minigame-earth-row {
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  width: 100%;
+  min-height: 80px;
+}
+
+.earth-tile {
+  height: 80px;
+  width: auto;
+  display: inline-block;
+}
+
+.sara-character {
+  position: absolute;
+  left: 0;
+  bottom: 80px; 
+  z-index: 2;
+}
+
+#sara-sprite {
+  height: 100px;
+  width: auto;
+  transition: left 0.1s;
+}
+
+.earth-portal-stack {
+  position: relative;
+  display: inline-block;
+  vertical-align: bottom;
+}
+.earth-portal-stack .portal-left,
+.earth-portal-stack .portal-right {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%) translateY(-90%);
+  z-index: 3;
+}
+
+.minigame-row-upper {
+  width: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: absolute;
+  right: 0;
+  bottom: 120px;
+  z-index: 9;
+  padding: 0;
+}
+
+.minigame-row-upper .earth-tile {
+  height: 80px;
+  width: 80px;
+  min-width: 80px;
+  max-width: 80px;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.portal-left, .portal-right {
+  height: 130px;
+  width: auto;
+  margin: 0;
+}
+
+/* Sara starts in the middle of the lower row */
+.sara-character {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 80px;
+  z-index: 2;
+}
+
+.earth-water-stack, .earth-pot-stack {
+  position: relative;
+  display: inline-block;
+  vertical-align: bottom;
+}
+.earth-water-stack .water {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%) translateY(-90%);
+  z-index: 3;
+  height: 70px;
+  width: auto;
+}
+.pot-upper, .pot-lower {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%) translateY(-90%);
+  z-index: 3;
+  height: 90px;
+  width: auto;
 }

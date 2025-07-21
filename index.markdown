@@ -3,40 +3,56 @@ layout: default
 ---
 
 <div class="landing-page">
-  <div class="garden-container">
-    <!-- Planters positioned around the screen -->
-    <div class="planter planter-1" data-plant="1">
-      <div class="pot"></div>
-      <div class="plant plant-1"></div>
-    </div>
-    <div class="planter planter-2" data-plant="2">
-      <div class="pot"></div>
-      <div class="plant plant-2"></div>
-    </div>
-    <div class="planter planter-3" data-plant="3">
-      <div class="pot"></div>
-      <div class="plant plant-3"></div>
-    </div>
-    <div class="planter planter-4" data-plant="4">
-      <div class="pot"></div>
-      <div class="plant plant-4"></div>
-    </div>
-    <div class="planter planter-5" data-plant="5">
-      <div class="pot"></div>
-      <div class="plant plant-5"></div>
-    </div>
-    <div class="planter planter-6" data-plant="6">
-      <div class="pot"></div>
-      <div class="plant plant-6"></div>
-    </div>
-  </div>
   
   <div class="landing-content">
-    <h1>Hi, I'm Sara 👋</h1>
+    <h1>Hi, I'm Sara <img src="/assets/images/sara_front.png" alt="Sara avatar" style="height:6rem;vertical-align:bottom;margin-left:0.1em;"></h1>
     
     <p class="landing-intro">
-      I'm a computer science senior at CMU with an interest in game design and human-computer interaction.
+      I'm a computer science senior at CMU with an interest in human-computer interaction who designs games for fun.
     </p>
+  </div>
+</div>
+
+<!-- Mini Game Row Upper -->
+<div class="minigame-row-upper">
+  <div class="earth-portal-stack">
+    <img src="/assets/images/minigame/earth.png" alt="earth" class="earth-tile" />
+    <img src="/assets/images/minigame/portal-left.png" alt="portal left" class="portal-left" />
+  </div>
+  <img src="/assets/images/minigame/earth.png" alt="earth" class="earth-tile" />
+  <div class="earth-pot-stack">
+    <img src="/assets/images/minigame/earth.png" alt="earth" class="earth-tile" />
+    <img src="/assets/images/minigame/pot.png" alt="pot" class="pot-upper" />
+  </div>
+</div>
+
+<!-- Mini Game Row -->
+<div class="minigame-row">
+  <div class="minigame-earth-row">
+    <div class="earth-pot-stack">
+      <img src="/assets/images/minigame/earth.png" alt="earth" class="earth-tile" />
+      <img src="/assets/images/minigame/pot.png" alt="pot" class="pot-lower" />
+    </div>
+    <img src="/assets/images/minigame/earth.png" alt="earth" class="earth-tile" />
+    <div class="earth-water-stack">
+      <img src="/assets/images/minigame/earth.png" alt="earth" class="earth-tile" />
+      <img src="/assets/images/minigame/water.png" alt="water" class="water" />
+    </div>
+    <img src="/assets/images/minigame/earth.png" alt="earth" class="earth-tile" />
+    <div class="earth-water-stack">
+      <img src="/assets/images/minigame/earth.png" alt="earth" class="earth-tile" />
+      <img src="/assets/images/minigame/water.png" alt="water" class="water" />
+    </div>
+    <img src="/assets/images/minigame/earth.png" alt="earth" class="earth-tile" />
+    <img src="/assets/images/minigame/earth.png" alt="earth" class="earth-tile" />
+    <img src="/assets/images/minigame/earth.png" alt="earth" class="earth-tile" />
+    <div class="earth-portal-stack">
+      <img src="/assets/images/minigame/earth.png" alt="earth" class="earth-tile" />
+      <img src="/assets/images/minigame/portal-right.png" alt="portal right" class="portal-right" />
+    </div>
+    <div class="sara-character">
+      <img id="sara-sprite" src="/assets/images/minigame/sara_standing_left.png" alt="Sara" />
+    </div>
   </div>
 </div>
 
@@ -199,4 +215,6 @@ layout: default
     </div>
   </section>
 </div>
+
+<script src="/assets/js/minigame.js"></script>
 
