@@ -23,6 +23,7 @@ layout: default
   <div class="earth-pot-stack">
     <img src="/assets/images/minigame/earth.png" alt="earth" class="earth-tile" />
     <img src="/assets/images/minigame/pot.png" alt="pot" class="pot-upper" />
+    <img src="/assets/images/minigame/plant.png" alt="plant" class="plant-upper" style="display:none;" />
   </div>
 </div>
 
@@ -32,6 +33,7 @@ layout: default
     <div class="earth-pot-stack">
       <img src="/assets/images/minigame/earth.png" alt="earth" class="earth-tile" />
       <img src="/assets/images/minigame/pot.png" alt="pot" class="pot-lower" />
+      <img src="/assets/images/minigame/plant.png" alt="plant" class="plant-lower" style="display:none;" />
     </div>
     <img src="/assets/images/minigame/earth.png" alt="earth" class="earth-tile" />
     <div class="earth-water-stack">

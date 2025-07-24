@@ -12,7 +12,7 @@
   const portalRightOffset = 0; // rightmost tile, no extra offset needed
   // Upper row
   const upperNumEarthTiles = 3;
-  const upperEarthTileWidth = 60;
+  const upperEarthTileWidth = 80;
   const upperMaxX = (upperNumEarthTiles - 1) * upperEarthTileWidth;
   const upperRowLeftOffset = 0.85; // 85% of the container width
   const containerWidth = document.querySelector('.minigame-row').offsetWidth;
@@ -51,59 +51,166 @@
   }
 
   function updateSaraPosition() {
+    console.trace('[updateSaraPosition] Called from:');
+    const earthRow = document.querySelector('.minigame-earth-row');
+    const earthRowRect = earthRow.getBoundingClientRect();
+    const parentRect = earthRow.parentElement.getBoundingClientRect();
+    const offsetLeft = earthRowRect.left - parentRect.left;
+
     if (saraRow === 'lower') {
       saraCharacter.style.bottom = '80px';
-      // Sara's left is pixel-based for lower row
-      saraCharacter.style.left = (saraX + earthTileWidth / 2) + 'px';
+      const leftPx = offsetLeft + saraX + earthTileWidth / 2;
+      saraCharacter.style.left = leftPx + 'px';
       saraCharacter.style.transform = 'translateX(-50%)';
+      console.log(`[updateSaraPosition] LOGICAL: row=${saraRow}, saraX=${saraX}`);
+      const saraRect = saraCharacter.getBoundingClientRect();
+      console.log(`[updateSaraPosition] VISUAL: left=${saraRect.left}, top=${saraRect.top}`);
+      console.log(`[updateSaraPosition] row=lower, saraX=${saraX}, left=${leftPx}`);
     } else {
-      // Place Sara in upper row, farther right
       saraCharacter.style.bottom = '200px';
-      // Sara's left is pixel-based, offset by upper row's left offset
-      saraCharacter.style.left = (upperRowPixelOffset + saraX + upperEarthTileWidth / 2) + 'px';
+      const leftPx = offsetLeft + upperRowPixelOffset + saraX + upperEarthTileWidth / 2;
+      saraCharacter.style.left = leftPx + 'px';
       saraCharacter.style.transform = 'translateX(-50%)';
+      console.log(`[updateSaraPosition] LOGICAL: row=${saraRow}, saraX=${saraX}`);
+      const saraRect = saraCharacter.getBoundingClientRect();
+      console.log(`[updateSaraPosition] VISUAL: left=${saraRect.left}, top=${saraRect.top}`);
+      console.log(`[updateSaraPosition] row=upper, saraX=${saraX}, left=${leftPx}`);
     }
+    setTimeout(() => {
+      const currentLeft = saraCharacter.style.left;
+      console.log(`[TIMEOUT CHECK] Sara's left is now: ${currentLeft}`);
+    }, 100);
   }
+
+  // Movement step size (smaller than full tile)
+  const movementStep = 20; // px per keypress (instead of full 80px tile)
 
   function moveSara(dir) {
     if (saraRow === 'lower') {
       if (dir === 'right') {
-        facing = 'right';
-        saraX = Math.min(saraX + earthTileWidth, maxX);
-        spriteIndex = (spriteIndex + 1) % rightSprites.length;
-      } else {
-        facing = 'left';
-        saraX = Math.max(saraX - earthTileWidth, 0);
-        spriteIndex = (spriteIndex + 1) % leftSprites.length;
-      }
-      // Only rightmost tile of lower row is a portal
-      if (saraX === maxX && dir === 'right') {
-        // Enter portal-right, appear at leftmost tile of upper row
-        saraRow = 'upper';
-        saraX = 0;
+        if (saraX < maxX) {
+          facing = 'right';
+          saraX = Math.min(saraX + movementStep, maxX);
+          spriteIndex = (spriteIndex + 1) % rightSprites.length;
+        } else if (saraX === maxX) {
+          // Only rightmost tile of lower row is a portal
+          console.log('Sara entering portal from lower row (rightmost tile) to upper row (leftmost tile)');
+          saraRow = 'upper';
+          saraX = 0;
+        }
+      } else if (dir === 'left') {
+        if (saraX > 0) {
+          facing = 'left';
+          saraX = Math.max(saraX - movementStep, 0);
+          spriteIndex = (spriteIndex + 1) % leftSprites.length;
+        }
+        // No portal on the leftmost tile of lower row
       }
     } else if (saraRow === 'upper') {
       if (dir === 'right') {
-        facing = 'right';
-        saraX = Math.min(saraX + upperEarthTileWidth, upperMaxX);
-        spriteIndex = (spriteIndex + 1) % rightSprites.length;
-      } else {
-        facing = 'left';
-        saraX = Math.max(saraX - upperEarthTileWidth, 0);
-        spriteIndex = (spriteIndex + 1) % leftSprites.length;
-      }
-      // Only leftmost tile of upper row is a portal
-      if (saraX === 0 && dir === 'left') {
-        // Enter portal-left, appear at rightmost tile of lower row
-        saraRow = 'lower';
-        saraX = maxX;
+        if (saraX < upperMaxX) {
+          facing = 'right';
+          saraX = Math.min(saraX + movementStep, upperMaxX);
+          spriteIndex = (spriteIndex + 1) % rightSprites.length;
+        }
+        // No portal on the rightmost tile of upper row
+      } else if (dir === 'left') {
+        if (saraX > 0) {
+          facing = 'left';
+          saraX = Math.max(saraX - movementStep, 0);
+          spriteIndex = (spriteIndex + 1) % leftSprites.length;
+        } else if (saraX === 0) {
+          // Only leftmost tile of upper row is a portal
+          console.log('Sara entering portal from upper row (leftmost tile) to lower row (rightmost tile)');
+          saraRow = 'lower';
+          saraX = maxX;
+        }
       }
     }
     updateSaraPosition();
     updateSaraSprite();
+    console.log(`Sara position: row=${saraRow}, x=${saraX}`);
+  }
+
+  // --- Minigame object positions (indices) ---
+  const lowerPotTile = 0; // leftmost tile, index 0
+  const upperPotTile = 2; // rightmost tile of upper row, index 2
+  const waterTiles = [2, 4]; // lower row, tiles 3 and 5 (indices 2, 4)
+
+  // DOM elements for water and pots/plants
+  const waterElems = document.querySelectorAll('.earth-water-stack .water');
+  const lowerPotElem = document.getElementById('minigame-pot-lower');
+  const upperPotElem = document.getElementById('minigame-pot-upper');
+  const lowerPlantElem = document.querySelector('.plant-lower');
+  const upperPlantElem = document.querySelector('.plant-upper');
+
+  // Track if Sara is carrying water
+  let carryingWater = false;
+
+  // Helper: get Sara's current tile index (row-aware)
+  function getSaraTileIndex() {
+    if (saraRow === 'lower') {
+      return Math.round(saraX / earthTileWidth);
+    } else {
+      return Math.round(saraX / upperEarthTileWidth);
+    }
+  }
+
+  // Helper: check if Sara is on a water tile (returns index in waterTiles or -1)
+  function getWaterTileIndex() {
+    if (saraRow !== 'lower') return -1;
+    const idx = getSaraTileIndex();
+    return waterTiles.indexOf(idx);
+  }
+
+  // Helper: check if Sara is on a pot tile (returns 'lower', 'upper', or null)
+  function getPotTile() {
+    const idx = getSaraTileIndex();
+    if (saraRow === 'lower' && idx === lowerPotTile) return 'lower';
+    if (saraRow === 'upper' && idx === upperPotTile) return 'upper';
+    return null;
+  }
+
+  // Handle interaction (A key)
+  function handleInteraction() {
+    // Pick up water
+    if (!carryingWater) {
+      const waterIdx = getWaterTileIndex();
+      if (waterIdx !== -1 && waterElems[waterIdx] && !waterElems[waterIdx].classList.contains('picked-up')) {
+        carryingWater = true;
+        waterElems[waterIdx].style.display = 'none';
+        waterElems[waterIdx].classList.add('picked-up');
+        // Optionally: show a water-carrying icon on Sara
+        return;
+      }
+    }
+    // Water a pot
+    if (carryingWater) {
+      const pot = getPotTile();
+      if (pot === 'lower' && lowerPlantElem && lowerPlantElem.style.display !== 'block') {
+        carryingWater = false;
+        lowerPlantElem.style.display = 'block';
+        lowerPlantElem.style.transform = 'translateX(-50%) scaleY(0)';
+        setTimeout(() => {
+          lowerPlantElem.style.transform = 'translateX(-50%) scaleY(1)';
+        }, 10);
+        return;
+      }
+      if (pot === 'upper' && upperPlantElem && upperPlantElem.style.display !== 'block') {
+        carryingWater = false;
+        upperPlantElem.style.display = 'block';
+        upperPlantElem.style.transform = 'translateX(-50%) scaleY(0)';
+        setTimeout(() => {
+          upperPlantElem.style.transform = 'translateX(-50%) scaleY(1)';
+        }, 10);
+        return;
+      }
+    }
   }
 
   updateSaraPosition();
+  console.log(`Portal on lower row: rightmost tile (x=${maxX})`);
+  console.log(`Portal on upper row: leftmost tile (x=0)`);
 
   document.addEventListener('keydown', function(e) {
     if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
@@ -113,6 +220,8 @@
       } else if (e.key === 'ArrowLeft') {
         moveSara('left');
       }
+    } else if (e.key === 'a' || e.key === 'A') {
+      handleInteraction();
     }
   });
 })(); 

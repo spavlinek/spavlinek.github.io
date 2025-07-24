@@ -1249,17 +1249,6 @@ code, pre {
     height: 50px;
   }
   
-  .plant {
-    width: 35px;
-    height: 35px;
-    bottom: 50px;
-  }
-  
-  .pot {
-    width: 40px;
-    height: 25px;
-    bottom: 50px;
-  }
 }
 
 .minigame-row {
@@ -1287,13 +1276,6 @@ code, pre {
   height: 80px;
   width: auto;
   display: inline-block;
-}
-
-.sara-character {
-  position: absolute;
-  left: 0;
-  bottom: 80px; 
-  z-index: 2;
 }
 
 #sara-sprite {
@@ -1346,8 +1328,6 @@ code, pre {
 /* Sara starts in the middle of the lower row */
 .sara-character {
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
   bottom: 80px;
   z-index: 2;
 }
@@ -1365,6 +1345,22 @@ code, pre {
   z-index: 3;
   height: 70px;
   width: auto;
+}
+.plant-lower,
+.plant-upper {
+  position: absolute;
+  width: auto;
+  height: 90px;
+  left: 50%;
+  bottom: 130px;
+  transform: translateX(-50%) scaleY(0);
+  z-index: 4;
+  display: none;
+  transition: transform 0.5s cubic-bezier(.4,2,.6,1), opacity 0.5s;
+  transform-origin: bottom center;
+}
+.earth-pot-stack {
+  position: relative;
 }
 .pot-upper, .pot-lower {
   position: absolute;
