@@ -17,7 +17,7 @@ layout: default
 <div class="minigame-row-upper">
   <div class="earth-portal-stack">
     <img src="/assets/images/minigame/earth.png" alt="earth" class="earth-tile" />
-    <img src="/assets/images/minigame/portal-left.png" alt="portal left" class="portal-left" />
+    <img src="/assets/images/minigame/portal-right.png" alt="portal right" class="portal-right" />
   </div>
   <img src="/assets/images/minigame/earth.png" alt="earth" class="earth-tile" />
   <div class="earth-pot-stack">
@@ -50,7 +50,7 @@ layout: default
     <img src="/assets/images/minigame/earth.png" alt="earth" class="earth-tile" />
     <div class="earth-portal-stack">
       <img src="/assets/images/minigame/earth.png" alt="earth" class="earth-tile" />
-      <img src="/assets/images/minigame/portal-right.png" alt="portal right" class="portal-right" />
+      <img src="/assets/images/minigame/portal-left.png" alt="portal left" class="portal-left" />
     </div>
     <div class="sara-character">
       <img id="sara-sprite" src="/assets/images/minigame/sara_standing_left.png" alt="Sara" />

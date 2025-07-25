@@ -11,7 +11,7 @@ hide_title: true
   {% endif %}
   <div class="about-text">
     <h1>About Me</h1>
-    <p class="about-intro">Hi, I'm Sara Pavlinek! I'm an experienced computer science senior with a human-computer interaction concentration and game design minor, passionate about creating meaningful interactive experiences through technology. </p>
+    <p class="about-intro">Hi, I'm Sara Pavlinek! I'm a senior at CMU, majoring in computer science with a human-computer interaction concentration and game design minor, passionate about creating meaningful interactive experiences through technology. Thanks for visiting my site :) </p>
   </div>
 </div>
 
@@ -20,7 +20,7 @@ hide_title: true
 I'm currently pursuing my Bachelor of Science in Computer Science at Carnegie Mellon University, where I'm exploring the intersection of game design, computer science, and human-computer interaction. I approach problems with both strong technical skills and a creative mind.
 
 ## Beyond Work
-When I'm not behind the computer, you will most likely find me somewhere in nature or curled up in front of the TV playing hours of Legend of Zelda. I enjoy rock climbing, running, biking, hiking, or even just plain walking. I also love to travel to experience new things and learn about different cultures.
+As you can probably tell from the landing page (guilty as charged), I love plants and games. When I'm not behind the computer, you will most likely find me somewhere in nature or curled up in front of the TV playing hours of Legend of Zelda. I enjoy rock climbing, running, biking, hiking, or even just plain walking.
 
 ---
 
