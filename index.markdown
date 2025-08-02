@@ -10,6 +10,15 @@ layout: default
     <p class="landing-intro">
       I'm a computer science senior at CMU with an interest in human-computer interaction who designs games for fun.
     </p>
+
+    <!-- Scroll Down Indicator -->
+    <div class="scroll-indicator" id="scroll-indicator">
+      <div class="scroll-arrow">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6-6-6 1.41-1.42z"/>
+        </svg>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -119,7 +128,7 @@ layout: default
       <h3>Flytrap Adventures</h3>
       <p class="project-subtitle">2D Platformer Game</p>
       
-      <p>Created an immersive 2D platformer where players navigate a flytrap through a dynamic greenhouse environment, showcasing innovative game mechanics and environmental storytelling.</p>
+      <p> With a team from CMU's Game Creation Society, created a 2D platformer where players navigate a flytrap through a dynamic greenhouse environment, showcasing innovative game mechanics and environmental storytelling. </p>
       
       <a href="/projects/game-design/" class="project-link">View More of My Game Design →</a>
     </div>

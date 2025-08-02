@@ -6,7 +6,7 @@ hide_title: true
 ---
 # Game Reviews
 
-Welcome to my game reviews section where I share analysis and critiques I wrote for some of my game design classes at CMU. So far I've focused on educational games and table-top roleplaying games, but I'm excited to add more games to this collection. After all, the more (different) games you play, the better of a game designer do you become.
+Welcome to my game reviews section where I share analysis and critiques I wrote for some of my game design classes at CMU. So far I've focused on educational games and table-top roleplaying games, but I'm excited to add more games to this collection. 
 
 ## Recent Game Reviews
 

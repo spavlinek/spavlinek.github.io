@@ -64,6 +64,82 @@
   waterIndicator.style.pointerEvents = 'none';
   saraCharacter.appendChild(waterIndicator);
 
+  // Create text indicator for typewriter messages
+  const textIndicator = document.createElement('div');
+  textIndicator.style.position = 'absolute';
+  textIndicator.style.left = '50%';
+  textIndicator.style.top = '-70px'; // Above water indicator
+  textIndicator.style.transform = 'translateX(-50%)';
+  textIndicator.style.fontFamily = "'Press Start 2P', monospace";
+  textIndicator.style.fontSize = '8px';
+  textIndicator.style.color = 'black';
+  textIndicator.style.whiteSpace = 'nowrap';
+  textIndicator.style.display = 'none';
+  textIndicator.style.zIndex = '6';
+  textIndicator.style.pointerEvents = 'none';
+  saraCharacter.appendChild(textIndicator);
+
+  // Track tutorial state
+  let hasMovedYet = false;
+  let tutorialShown = false;
+  let isTextDisplaying = false;
+
+  // Typewriter effect function
+  function typeText(text, callback, displayDuration = 2000) {
+    if (isTextDisplaying) return; // Don't start new text if already displaying
+    
+    isTextDisplaying = true;
+    textIndicator.style.display = 'block';
+    textIndicator.textContent = '';
+    let i = 0;
+    
+    function typeChar() {
+      if (i < text.length) {
+        textIndicator.textContent += text.charAt(i);
+        i++;
+        setTimeout(typeChar, 100); // 100ms between characters
+      } else {
+        setTimeout(() => {
+          textIndicator.style.display = 'none';
+          isTextDisplaying = false;
+          if (callback) callback();
+        }, displayDuration); // Use custom duration
+      }
+    }
+    
+    typeChar();
+  }
+
+  // Show initial tutorial message
+  function showInitialTutorial() {
+    if (!tutorialShown) {
+      tutorialShown = true;
+      setTimeout(() => {
+        typeText("Help me water my plants!");
+      }, 1000); // Wait 1 second after page load
+    }
+  }
+
+  // Show movement tutorial
+  function showMovementTutorial() {
+    if (!hasMovedYet) {
+      hasMovedYet = true;
+      
+      // Wait for initial text to finish if it's still displaying
+      function tryShowMovementText() {
+        if (!isTextDisplaying) {
+          const text = "Press 'a' to pick up/use water";
+          const typingDuration = text.length * 100; // 100ms per character
+          typeText(text, null, typingDuration); // Show just long enough to type
+        } else {
+          setTimeout(tryShowMovementText, 100); // Check again in 100ms
+        }
+      }
+      
+      tryShowMovementText();
+    }
+  }
+
   // Update water indicator position
   function updateWaterIndicator() {
     if (carryingWater) {
@@ -124,25 +200,52 @@
   console.log(`Portal debug: numEarthTiles=${numEarthTiles}, earthTileWidth=${earthTileWidth}`);
   console.log(`Portal debug: maxX=${maxX}, lowerPortalStartX=${lowerPortalStartX}, lowerPortalMiddleX=${lowerPortalMiddleX}`);
 
+  // Function to get the current scale factor applied by CSS
+  function getCurrentScale() {
+    const earthRow = document.querySelector('.minigame-earth-row');
+    const transform = window.getComputedStyle(earthRow.parentElement).transform;
+    if (transform && transform !== 'none') {
+      const matrix = transform.match(/matrix\(([^)]+)\)/);
+      if (matrix) {
+        const values = matrix[1].split(', ');
+        return parseFloat(values[0]); // scaleX value
+      }
+    }
+    return 1; // no scaling
+  }
+
+  // Get scaled values
+  function getScaledValue(value) {
+    return value * getCurrentScale();
+  }
+
   function moveSara(dir) {
+    // Show tutorial message on first movement
+    showMovementTutorial();
+    
+    const scale = getCurrentScale();
+    const scaledPortalStartX = lowerPortalStartX * scale;
+    const scaledLowerRowMinX = lowerRowMinX * scale;
+    const scaledUpperRowMaxX = upperRowMaxX * scale;
+
     if (saraRow === 'lower') {
       if (dir === 'right') {
         if (saraX < maxX) {
           facing = 'right';
           saraX = Math.min(saraX + movementStep, maxX);
           spriteIndex = (spriteIndex + 1) % rightSprites.length;
-          // Check if Sara is in portal area and can teleport
-          if (saraX >= lowerPortalStartX) {
+          // Check if Sara is in portal area and can teleport (adjusted for scale)
+          if (saraX >= scaledPortalStartX) {
             console.log('Sara entering portal from lower row (midway through portal tile) to upper row (leftmost tile)');
             saraRow = 'upper';
             saraX = 0;
           }
         }
       } else if (dir === 'left') {
-        // Prevent moving left past the end of tile 1
+        // Prevent moving left past the end of tile 1 (adjusted for scale)
         const nextX = Math.max(saraX - movementStep, 0);
-        if (nextX >= lowerRowMinX) {
-          if (saraX > lowerRowMinX) {
+        if (nextX >= scaledLowerRowMinX) {
+          if (saraX > scaledLowerRowMinX) {
             facing = 'left';
             saraX = nextX;
             spriteIndex = (spriteIndex + 1) % leftSprites.length;
@@ -151,10 +254,10 @@
       }
     } else if (saraRow === 'upper') {
       if (dir === 'right') {
-        // Prevent moving right past the end of tile 1
+        // Prevent moving right past the end of tile 1 (adjusted for scale)
         const nextX = Math.min(saraX + movementStep, upperMaxX);
-        if (nextX <= upperRowMaxX) {
-          if (saraX < upperRowMaxX) {
+        if (nextX <= scaledUpperRowMaxX) {
+          if (saraX < scaledUpperRowMaxX) {
             facing = 'right';
             saraX = nextX;
             spriteIndex = (spriteIndex + 1) % rightSprites.length;
@@ -169,13 +272,13 @@
           // Only leftmost tile of upper row is a portal
           console.log('Sara entering portal from upper row (leftmost tile) to lower row (middle of portal tile)');
           saraRow = 'lower';
-          saraX = lowerPortalStartX;
+          saraX = scaledPortalStartX;
         }
       }
     }
     updateSaraPosition();
     updateSaraSprite();
-    console.log(`Sara position: row=${saraRow}, x=${saraX}`);
+    console.log(`Sara position: row=${saraRow}, x=${saraX}, scale=${scale}`);
   }
 
   // --- Minigame object positions (indices) ---
@@ -189,6 +292,23 @@
   const upperPotElem = document.getElementById('minigame-pot-upper');
   const lowerPlantElem = document.querySelector('.plant-lower');
   const upperPlantElem = document.querySelector('.plant-upper');
+
+  // Function to check if both plants are watered and show scroll indicator
+  function checkBothPlantsWatered() {
+    const lowerWatered = lowerPlantElem && lowerPlantElem.style.display === 'block';
+    const upperWatered = upperPlantElem && upperPlantElem.style.display === 'block';
+    
+    if (lowerWatered && upperWatered) {
+      const scrollIndicator = document.getElementById('scroll-indicator');
+      if (scrollIndicator) {
+        scrollIndicator.classList.add('show');
+        // Optional: Show a completion message
+        setTimeout(() => {
+          typeText("Great job! Now explore more below!");
+        }, 1000);
+      }
+    }
+  }
 
   // Helper: get Sara's current tile index (row-aware)
   function getSaraTileIndex() {
@@ -209,9 +329,9 @@
   // Helper: check if Sara is on a pot tile (returns 'lower', 'upper', or null)
   function getPotTile() {
     const idx = getSaraTileIndex();
-    // Allow watering when Sara is at the edge of tile 1 (near the pot)
-    if (saraRow === 'lower' && (idx === lowerPotTile || saraX >= lowerRowMinX - movementStep)) return 'lower';
-    if (saraRow === 'upper' && (idx === upperPotTile || saraX <= upperRowMaxX + movementStep)) return 'upper';
+    // Only allow watering when Sara is in the tile right next to the pot
+    if (saraRow === 'lower' && idx === 1) return 'lower'; // Tile right next to lower pot (tile 0)
+    if (saraRow === 'upper' && idx === 1) return 'upper'; // Tile right next to upper pot (tile 2)
     return null;
   }
 
@@ -239,6 +359,7 @@
         setTimeout(() => {
           lowerPlantElem.style.transform = 'translateX(-50%) scaleY(1)';
         }, 10);
+        checkBothPlantsWatered();
         return;
       }
       if (pot === 'upper' && upperPlantElem && upperPlantElem.style.display !== 'block') {
@@ -249,6 +370,7 @@
         setTimeout(() => {
           upperPlantElem.style.transform = 'translateX(-50%) scaleY(1)';
         }, 10);
+        checkBothPlantsWatered();
         return;
       }
     }
@@ -257,6 +379,9 @@
   updateSaraPosition();
   console.log(`Portal on lower row: rightmost tile (x=${maxX})`);
   console.log(`Portal on upper row: leftmost tile (x=0)`);
+
+  // Show initial tutorial message
+  showInitialTutorial();
 
   document.addEventListener('keydown', function(e) {
     if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {

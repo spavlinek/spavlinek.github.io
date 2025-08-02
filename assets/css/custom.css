@@ -1,6 +1,7 @@
 /* Custom Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 /* Custom CSS Variables */
 :root {
@@ -29,6 +30,48 @@
   box-sizing: border-box;
   position: relative;
   padding-bottom: 120px; /* enough space for minigame row */
+}
+
+/* Scroll Down Indicator */
+.scroll-indicator {
+  display: none; /* Hidden by default */
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  margin-top: 2rem;
+}
+
+.scroll-indicator.show {
+  display: flex;
+}
+
+.scroll-indicator:hover {
+  opacity: 0.7;
+}
+
+.scroll-arrow {
+  width: 32px;
+  height: 32px;
+  color: var(--primary-color);
+  animation: bounce 2s infinite;
+}
+
+.scroll-arrow svg {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
 }
 
 .landing-content {
@@ -96,6 +139,11 @@
 @media (max-width: 768px) {
   .landing-content h1 {
     font-size: 2.5rem;
+  }
+  
+  .scroll-arrow {
+    width: 28px;
+    height: 28px;
   }
   
   .landing-intro {
@@ -1262,6 +1310,7 @@ code, pre {
   right: 0;
   bottom: 0;
   z-index: 10;
+  transform-origin: bottom center;
 }
 
 .minigame-earth-row {
@@ -1270,6 +1319,7 @@ code, pre {
   position: relative;
   width: 100%;
   min-height: 80px;
+  transform-origin: bottom center;
 }
 
 .earth-tile {
@@ -1308,6 +1358,7 @@ code, pre {
   bottom: 120px;
   z-index: 9;
   padding: 0;
+  transform-origin: bottom right;
 }
 
 .minigame-row-upper .earth-tile {
@@ -1370,4 +1421,103 @@ code, pre {
   z-index: 3;
   height: 90px;
   width: auto;
+}
+
+/* Responsive minigame scaling */
+@media (max-width: 1200px) {
+  .minigame-row,
+  .minigame-row-upper {
+    transform: scale(0.9);
+  }
+  .minigame-row-upper {
+    bottom: 108px; /* 120px * 0.9 */
+  }
+}
+
+@media (max-width: 1000px) {
+  .minigame-row,
+  .minigame-row-upper {
+    transform: scale(0.8);
+  }
+  .minigame-row-upper {
+    bottom: 96px; /* 120px * 0.8 */
+  }
+}
+
+@media (max-width: 800px) {
+  .minigame-row,
+  .minigame-row-upper {
+    transform: scale(0.7);
+  }
+  .minigame-row-upper {
+    bottom: 84px; /* 120px * 0.7 */
+  }
+}
+
+@media (max-width: 600px) {
+  .minigame-row,
+  .minigame-row-upper {
+    transform: scale(0.6);
+  }
+  .minigame-row-upper {
+    bottom: 72px; /* 120px * 0.6 */
+  }
+}
+
+@media (max-width: 480px) {
+  .minigame-row,
+  .minigame-row-upper {
+    transform: scale(0.5);
+  }
+  .minigame-row-upper {
+    bottom: 60px; /* 120px * 0.5 */
+  }
+}
+
+/* Project Images Styles */
+.project-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0.25rem 0.25rem;
+  justify-content: flex-start;
+}
+
+.project-images img {
+  max-width: 300px;
+  max-height: 225px;
+  object-fit: cover;
+  border-radius: 0.25rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.project-images img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive adjustments for project images */
+@media (max-width: 768px) {
+  .project-images {
+    justify-content: center;
+  }
+  
+  .project-images img {
+    max-width: 225px;
+    max-height: 170px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-images {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .project-images img {
+    max-width: 280px;
+    max-height: 210px;
+  }
 }
