@@ -122,6 +122,23 @@ layout: default
       <p>Designed and implemented a Python-based face model using PyQt5 for dynamic facial expression transitions, integrated into a personal trainer robot for real-time interactions.</p>
       
       <a href="/projects/technical/" class="project-link">View More of My Technical Projects →</a>
+      <div class="project-images">
+        <button class="carousel-nav prev">
+            <svg viewBox="0 0 24 24">
+            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+            </svg>
+        </button>
+        <div class="project-images-container">
+            <img src="{{ '/assets/images/face/ezgif-43f48114e79780.gif' | relative_url }}" alt="Face simulation - expression transitions" />
+            <img src="{{ '/assets/images/face/ezgif-43802e8aab12f2.gif' | relative_url }}" alt="Face simulation - dynamic expressions" />
+            <img src="{{ '/assets/images/face/Screenshot 2025-08-02 at 17.18.41.png' | relative_url }}" alt="Face simulation interface" />
+        </div>
+        <button class="carousel-nav next">
+            <svg viewBox="0 0 24 24">
+            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+            </svg>
+        </button>
+        </div>
     </div>
 
     <div class="project-item">
@@ -131,6 +148,24 @@ layout: default
       <p> With a team from CMU's Game Creation Society, created a 2D platformer where players navigate a flytrap through a dynamic greenhouse environment, showcasing innovative game mechanics and environmental storytelling. </p>
       
       <a href="/projects/game-design/" class="project-link">View More of My Game Design →</a>
+      <div class="project-images">
+        <button class="carousel-nav prev">
+            <svg viewBox="0 0 24 24">
+            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+            </svg>
+        </button>
+        <div class="project-images-container">
+            <img src="{{ '/assets/images/Flytrap/n8mDxt.png' | relative_url }}" alt="Flytrap Adventures gameplay" />
+            <img src="{{ '/assets/images/Flytrap/jJXk8j.png' | relative_url }}" alt="Flytrap Adventures level design" />
+            <img src="{{ '/assets/images/Flytrap/4t6iaa.png' | relative_url }}" alt="Flytrap Adventures mechanics" />
+            <img src="{{ '/assets/images/Flytrap/wdEpRI.png' | relative_url }}" alt="Flytrap Adventures environment" />
+        </div>
+        <button class="carousel-nav next">
+            <svg viewBox="0 0 24 24">
+            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+            </svg>
+        </button>
+        </div>
     </div>
 
     <div class="project-item">
@@ -140,6 +175,22 @@ layout: default
       <p>Currently analyzing conversational data using OpenAI's Whisper to extract insights about AI-assisted learning, while developing augmented reality experiences with computer vision.</p>
       
       <a href="/projects/research/" class="project-link">View More of My Research →</a>
+      <div class="project-images">
+        <button class="carousel-nav prev">
+            <svg viewBox="0 0 24 24">
+            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+            </svg>
+        </button>
+        <div class="project-images-container">
+            <img src="{{ '/assets/images/norilla/Screenshot 2025-08-02 at 19.14.06.png' | relative_url }}" alt="norilla 1" />
+            <img src="{{ '/assets/images/norilla/Screenshot 2025-08-02 at 19.14.16.png' | relative_url }}" alt="Face simulation - norilla 2" />
+        </div>
+        <button class="carousel-nav next">
+            <svg viewBox="0 0 24 24">
+            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+            </svg>
+        </button>
+        </div>
     </div>
   </div>
 

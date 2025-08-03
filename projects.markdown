@@ -21,7 +21,7 @@ Explore my academic work and ongoing research projects.
 
 ## Game Design Projects
 
-Discover my game design projects, including prototypes, concepts, and completed games.
+Discover my completed game design projects.
 
 [View Game Design projects →](/projects/game-design/)
 

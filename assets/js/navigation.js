@@ -67,3 +67,88 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 }); 
+
+// Project Images Carousel Functionality - Simple Direct Approach
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM loaded, initializing carousels...');
+    
+    // Wait a bit to ensure everything is loaded
+    setTimeout(function() {
+        initCarousels();
+    }, 100);
+});
+
+function initCarousels() {
+    const carousels = document.querySelectorAll('.project-images');
+    console.log('Found carousels:', carousels.length);
+    
+    carousels.forEach((carousel, index) => {
+        const container = carousel.querySelector('.project-images-container');
+        const prevBtn = carousel.querySelector('.carousel-nav.prev');
+        const nextBtn = carousel.querySelector('.carousel-nav.next');
+        
+        console.log(`Carousel ${index}:`, { container, prevBtn, nextBtn });
+        
+        if (!container || !prevBtn || !nextBtn) {
+            console.log(`Missing elements for carousel ${index}`);
+            return;
+        }
+        
+        // Remove any existing listeners
+        const newPrevBtn = prevBtn.cloneNode(true);
+        const newNextBtn = nextBtn.cloneNode(true);
+        prevBtn.parentNode.replaceChild(newPrevBtn, prevBtn);
+        nextBtn.parentNode.replaceChild(newNextBtn, nextBtn);
+        
+        const scrollAmount = 420;
+        
+        // Add click listeners with direct scroll
+        newPrevBtn.onclick = function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Previous clicked - scrolling left');
+            const currentScroll = container.scrollLeft;
+            container.scrollTo({
+                left: Math.max(0, currentScroll - scrollAmount),
+                behavior: 'smooth'
+            });
+            return false;
+        };
+        
+        newNextBtn.onclick = function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Next clicked - scrolling right');
+            const currentScroll = container.scrollLeft;
+            const maxScroll = container.scrollWidth - container.clientWidth;
+            container.scrollTo({
+                left: Math.min(maxScroll, currentScroll + scrollAmount),
+                behavior: 'smooth'
+            });
+            return false;
+        };
+        
+        // Update button states
+        function updateButtonStates() {
+            const isAtStart = container.scrollLeft <= 1;
+            const isAtEnd = container.scrollLeft >= container.scrollWidth - container.clientWidth - 1;
+            
+            newPrevBtn.style.opacity = isAtStart ? '0.5' : '1';
+            newPrevBtn.disabled = isAtStart;
+            
+            newNextBtn.style.opacity = isAtEnd ? '0.5' : '1';
+            newNextBtn.disabled = isAtEnd;
+        }
+        
+        container.addEventListener('scroll', updateButtonStates);
+        updateButtonStates();
+        
+        console.log(`Carousel ${index} initialized successfully`);
+    });
+}
+
+// Also try again after everything loads
+window.addEventListener('load', function() {
+    console.log('Window loaded, re-initializing carousels...');
+    setTimeout(initCarousels, 200);
+}); 
