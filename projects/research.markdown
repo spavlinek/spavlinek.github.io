@@ -14,7 +14,7 @@ I am currently interested in studying the intersection of AI-assisted learning a
 ### AI-Assisted Learning
 *Institution: NoriLLA | Duration: June 2024 - Present*
 
-This research explores how adaptive feedback, powered by AI and computer vision, can enhance children’s science learning during real-world engineering construction activities. By providing real-time, personalized support, the system helps students better understand scientific concepts and apply them meaningfully while building. 
+This research explores how adaptive feedback, powered by AI and computer vision, can enhance children’s science learning during real-world engineering construction activities. By providing real-time, personalized support, the system helps students better understand scientific concepts and apply them meaningfully while building. Research paper is in the works!
 
 I also analyzed conversational data using OpenAI's Whisper to extract insights about AI-assisted learning patterns and effectiveness of augmented reality games developed by NoriLLA. This research investigates how AI tools can better support educational outcomes by understanding natural language interactions between students, their parents and AI systems. Research paper is in the works!
 
@@ -80,6 +80,12 @@ Performed large-scale data analysis using R and developed Linux pipelines for ge
 - Bioinformatics pipeline development
 - Large-scale data analysis techniques
 - Linux-based computational workflows
+
+[Full poster →]({{ '/assets/ISAAR-Poster-28072023_MT.pdf' | relative_url }})
+
+<div class="single-project-image">
+  <img src="{{ '/assets/images/Screenshot 2025-08-04 at 9.09.43.png' | relative_url }}" alt="Bio research poster" />
+</div>
 
 
 
