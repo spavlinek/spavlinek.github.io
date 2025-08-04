@@ -1465,13 +1465,17 @@ code, pre {
   }
 }
 
+@media (max-width: 768px) {
+  .minigame-row,
+  .minigame-row-upper {
+    display: none !important;
+  }
+}
+
 @media (max-width: 480px) {
   .minigame-row,
   .minigame-row-upper {
-    transform: scale(0.5);
-  }
-  .minigame-row-upper {
-    bottom: 60px; /* 120px * 0.5 */
+    display: none !important;
   }
 }
 
