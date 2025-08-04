@@ -549,7 +549,6 @@ code, pre {
   margin-bottom: 2rem;
   padding: 0 0 2rem 0;
   border-bottom: 1px solid var(--border-color);
-  margin-left: -2rem;
 }
 
 .about-profile-picture {
@@ -559,13 +558,11 @@ code, pre {
   object-fit: contain !important;
   box-shadow: none !important;
   flex-shrink: 0 !important;
-  margin-left: -10rem !important;
 }
 
 .about-text {
   flex: 1;
   padding-right: 0;
-  margin-right: -2rem;
 }
 
 .about-text h1 {
@@ -585,8 +582,44 @@ code, pre {
     flex-direction: column;
     text-align: left;
     gap: 1.5rem;
+    margin-left: 0 !important;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
   }
   
+  .about-profile-picture {
+    width: 250px !important;
+    height: 250px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    align-self: center;
+  }
+  
+  .about-text {
+    margin-right: 0 !important;
+    padding-right: 0 !important;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-header {
+    padding: 0 0.5rem;
+    gap: 1rem;
+  }
+  
+  .about-profile-picture {
+    width: 200px !important;
+    height: 200px !important;
+  }
+  
+  .about-text {
+    padding: 0 0.5rem;
+  }
+  
+  .about-text h1 {
+    font-size: 1.75rem;
+  }
 } 
 
 /* Force navigation styling with high specificity */
@@ -1467,14 +1500,40 @@ code, pre {
 
 @media (max-width: 768px) {
   .minigame-row,
-  .minigame-row-upper {
+  .minigame-row-upper,
+  .earth-tile,
+  .portal-left,
+  .portal-right,
+  .pot-upper,
+  .pot-lower,
+  .earth-water-stack,
+  .earth-pot-stack,
+  .earth-portal-stack,
+  .plant-lower,
+  .plant-upper,
+  .sara-character,
+  #sara-sprite,
+  .minigame-earth-row {
     display: none !important;
   }
 }
 
 @media (max-width: 480px) {
   .minigame-row,
-  .minigame-row-upper {
+  .minigame-row-upper,
+  .earth-tile,
+  .portal-left,
+  .portal-right,
+  .pot-upper,
+  .pot-lower,
+  .earth-water-stack,
+  .earth-pot-stack,
+  .earth-portal-stack,
+  .plant-lower,
+  .plant-upper,
+  .sara-character,
+  #sara-sprite,
+  .minigame-earth-row {
     display: none !important;
   }
 }
