@@ -73,7 +73,7 @@
   textIndicator.style.fontFamily = "'Press Start 2P', monospace";
   textIndicator.style.fontSize = '8px';
   textIndicator.style.color = 'black';
-  textIndicator.style.whiteSpace = 'nowrap';
+  textIndicator.style.whiteSpace = 'pre';
   textIndicator.style.display = 'none';
   textIndicator.style.zIndex = '6';
   textIndicator.style.pointerEvents = 'none';
@@ -304,7 +304,7 @@
         scrollIndicator.classList.add('show');
         // Optional: Show a completion message
         setTimeout(() => {
-          typeText("Great job! Now explore more below!");
+          typeText("Great job! Now \n explore more \n below!");
         }, 1000);
       }
     }
