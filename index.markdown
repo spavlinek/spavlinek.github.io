@@ -212,7 +212,7 @@ layout: default
               </a>
               <span class="period">Jun 2025 - Aug 2025</span>
             </div>
-            <p>Developed core features for the Mosh app using Swift, Firebase, and Google Cloud. Implemented user authentication, real-time messaging, and cloud storage solutions.</p>
+            <p>Developed key features for Mosh, a social music app, including a rewards system and in-app store which boosted user engagement and retention. Worked in a rapid iteration cycle, integrating user feedback from testing sessions into same-day design pivots, learning the full stack on the job and optimizing for real-time performance.</p>
             <div class="experience-tags">
               <span class="tag">Swift</span>
               <span class="tag">JavaScript</span>
