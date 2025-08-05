@@ -78,7 +78,7 @@
   max-width: 800px;
   padding: 2rem;
   z-index: 2;
-  text-align: left;
+  text-align: center;
   margin-top: -50vh;
   margin-bottom: 0;
 }
@@ -91,6 +91,42 @@
 }
 
 .landing-intro {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: var(--text-color);
+  margin: 0;
+}
+
+/* About Me Section Styles */
+.about-me-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+
+.about-me-section .about-profile-picture {
+  width: 300px !important;
+  height: 300px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15) !important;
+  margin: 0 !important;
+}
+
+.about-me-section .about-text {
+  max-width: 600px;
+}
+
+.about-me-section .about-text h1 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  color: var(--text-color);
+}
+
+.about-me-section .landing-intro {
   font-size: 1.25rem;
   line-height: 1.8;
   color: var(--text-color);
@@ -152,6 +188,39 @@
   
   .landing-content {
     padding: 1rem;
+  }
+  
+  /* About Me Section Mobile Styles */
+  .about-me-section {
+    gap: 1.5rem;
+  }
+  
+  .about-me-section .about-profile-picture {
+    width: 200px !important;
+    height: 200px !important;
+  }
+  
+  .about-me-section .about-text h1 {
+    font-size: 2rem;
+  }
+  
+  .about-me-section .landing-intro {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-me-section .about-profile-picture {
+    width: 160px !important;
+    height: 160px !important;
+  }
+  
+  .about-me-section .about-text h1 {
+    font-size: 1.75rem;
+  }
+  
+  .about-me-section .landing-intro {
+    font-size: 0.95rem;
   }
 }
 
