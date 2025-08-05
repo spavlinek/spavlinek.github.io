@@ -74,6 +74,7 @@
   textIndicator.style.fontSize = '8px';
   textIndicator.style.color = 'black';
   textIndicator.style.whiteSpace = 'pre';
+  textIndicator.style.textAlign = 'center';
   textIndicator.style.display = 'none';
   textIndicator.style.zIndex = '6';
   textIndicator.style.pointerEvents = 'none';
