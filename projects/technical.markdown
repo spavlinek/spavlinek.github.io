@@ -15,7 +15,8 @@ Here you'll find a collection of my technical projects done outside of schoolwor
 *Technologies: Python, PyQt5*  
 *CMU RASL | September 2023 - May 2024*
 
-Designed and implemented a Python-based face model using PyQt5 for dynamic facial expression transitions. Successfully integrated the model into a personal trainer robot for real-time interactions, demonstrating applications in human-robot interaction and embodied AI.
+Designed and implemented a Python-based facial model using PyQt5 to simulate dynamic, real-time expression transitions driven by customizable emotion percentages. Successfully integrated the system into a personal trainer robot to enable expressive, responsive interactions—demonstrating key applications in human-robot interaction and embodied AI. The model supported smooth emotional blending and real-time adaptability, enhancing the robot’s social presence and user engagement.
+
 
 [View on github →](https://github.com/spavlinek/FaceSimulation)
 
@@ -47,7 +48,7 @@ Designed and implemented a Python-based face model using PyQt5 for dynamic facia
 **Award:** Meta Challenge Winner  
 
 Grow is an virtual plant-growing experience that encouraged real-life plant care. It is an interactive website built using html, css, and javascript that allowed users to grow their own
-virtual plant before purchasing a live houseplant to train plant maintenance. he project combined digital engagement with real-world environmental consciousness, demonstrating creative problem-solving in sustainability technology. Won Meta's Sponsor Challenge: Best hack to help people connect, explore and unlock opportunities in the metaverse
+virtual plant before purchasing a live houseplant to train plant maintenance. The project combined digital engagement with real-world environmental consciousness, demonstrating creative problem-solving in sustainability technology. Won Meta's Sponsor Challenge: Best hack to help people connect, explore and unlock opportunities in the metaverse.
 
 [View on github →](https://github.com/spavlinek/grow)
 
@@ -66,7 +67,7 @@ SobStory is a social media app demo built using python that allowed users to log
 *Technologies: HTML, JavaScript, Spotify API*  
 *HackCMU 2023*
 
-Built a space-themed website that integrates with Spotify API to generate personalized music playlists, creating a unique "music universe" for each user. The project showcases API integration and creative data visualization.
+Vesmir is an immersive, space-themed web app that transforms users' Spotify data into a personalized “music universe.” By visualizing listening habits as celestial bodies, Vesmir allows users to explore their own musical galaxy and discover new artists by journeying through the universes of others. It blends personalization, exploration, and discovery to make music feel cosmic.
 
 [View on github →](https://github.com/spavlinek/vesmir)
 
@@ -76,7 +77,7 @@ Built a space-themed website that integrates with Spotify API to generate person
 *Technologies: Flutter, Android Studios*  
 *March - November 2021*
 
-Led the graphic design and app development efforts to create and publish an app specifically designed to aid seniors in using technology. The app focuses on accessibility and user-friendly interfaces for elderly users navigating digital tools.
+VERVIT is a mobile app built to help seniors navigate digital technology with confidence. Inspired by the isolation faced by elderly individuals during the COVID-19 pandemic, the app focused on accessibility, intuitive navigation, and simplified interfaces to promote digital inclusion. As the head of the design in addition to being a programmer, I conducted hands-on testing with older users to iteratively refine the design and ensure every interaction was tailored to their needs.
 
 [View on github →](https://github.com/Vervit-cz/Vervit_Application)
 
