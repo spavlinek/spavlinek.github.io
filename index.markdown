@@ -5,15 +5,11 @@ layout: default
 <div class="landing-page">
   
   <div class="landing-content">
-    <div class="about-me-section">
-      <img src="/assets/images/profile_pic_square.png" alt="Sara Pavlinek" class="about-profile-picture" />
-      <div class="about-text">
-        <h1>About Me</h1>
-        <p class="landing-intro">
-          Hi, I'm Sara! I'm a computer science senior at CMU with an interest in human-computer interaction who designs games for fun.
-        </p>
-      </div>
-    </div>
+    <h1>Hi, I'm Sara <img src="/assets/images/sara_front.png" alt="Sara avatar" style="height:6rem;vertical-align:bottom;margin-left:0.1em;"></h1>
+    
+    <p class="landing-intro">
+      I'm a computer science senior at CMU with an interest in human-computer interaction who designs games for fun.
+    </p>
 
     <!-- Scroll Down Indicator -->
     <div class="scroll-indicator" id="scroll-indicator">
