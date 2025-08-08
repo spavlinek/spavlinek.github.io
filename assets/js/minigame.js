@@ -84,6 +84,7 @@
   let hasMovedYet = false;
   let tutorialShown = false;
   let isTextDisplaying = false;
+  let firstArrowKeyPressed = false;
 
   // Typewriter effect function
   function typeText(text, callback, displayDuration = 2000) {
@@ -118,6 +119,21 @@
       setTimeout(() => {
         typeText("Help me water my plants!");
       }, 1000); // Wait 1 second after page load
+    }
+  }
+
+  // Hide game instructions on first arrow key press
+  function hideGameInstructions() {
+    if (!firstArrowKeyPressed) {
+      firstArrowKeyPressed = true;
+      const gameInstructions = document.getElementById('game-instructions');
+      if (gameInstructions) {
+        gameInstructions.classList.add('hidden');
+        // Remove from DOM after animation completes
+        setTimeout(() => {
+          gameInstructions.style.display = 'none';
+        }, 500); // Match the CSS transition duration
+      }
     }
   }
 
@@ -387,6 +403,7 @@
   document.addEventListener('keydown', function(e) {
     if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
       e.preventDefault(); // Prevent browser from scrolling
+      hideGameInstructions(); // Hide instructions on first arrow key press
       if (e.key === 'ArrowRight') {
         moveSara('right');
       } else if (e.key === 'ArrowLeft') {

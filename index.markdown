@@ -11,6 +11,15 @@ layout: default
       I'm a computer science senior at CMU with an interest in human-computer interaction who designs games for fun.
     </p>
 
+    <!-- Game Instructions -->
+    <div class="game-instructions" id="game-instructions">
+      <div class="arrow-keys">
+        <img src="/assets/images/minigame/arrowKeyLeft.png" alt="Left arrow key" class="arrow-key-img">
+        <img src="/assets/images/minigame/arrowKeyRight.png" alt="Right arrow key" class="arrow-key-img">
+      </div>
+      <p class="press-to-play">Press to Play</p>
+    </div>
+
     <!-- Scroll Down Indicator -->
     <div class="scroll-indicator" id="scroll-indicator">
       <div class="scroll-arrow">
