@@ -221,7 +221,7 @@ layout: default
               </a>
               <span class="period">Jun 2025 - Aug 2025</span>
             </div>
-            <p>Developed key features for Mosh, a social music app, including a rewards system and in-app store which boosted user engagement and retention. Worked in a rapid iteration cycle, integrating user feedback from testing sessions into same-day design pivots, learning the full stack on the job and optimizing for real-time performance.</p>
+            <p>Developed key features for Mosh, a social music app, including a rewards system and in-app store which boosted user engagement and retention. Worked in a rapid iteration cycle, integrating user feedback from testing sessions into same-day design pivots, learning the full stack on the job and optimizing for real-time performance. </p>
             <div class="experience-tags">
               <span class="tag">Swift</span>
               <span class="tag">JavaScript</span>
@@ -239,7 +239,8 @@ layout: default
               </a>
               <span class="period">Jun 2024 - May 2025 </span>
             </div>
-            <p>Analyzed conversational data using OpenAI's Whisper to extract insights about AI-assisted learning. Developed augmented reality balancing games utilizing computer vision technologies.</p>
+            <p> Implemented an AR game that uses AI to provably improve children’s learning of STEM concepts. Analyzed gameplay conversations using OpenAI’s Whisper, uncovering that AI feedback led to increased
+dialogue and collaboration between children and parents. </p>
             <div class="experience-tags">
               <span class="tag">Java</span>
               <span class="tag">Processing</span>
@@ -258,7 +259,7 @@ layout: default
               </a>
               <span class="period">Jan 2024 - Dec 2024</span>
             </div>
-            <p>Lead recitations for 30 students in Fundamentals of Programming. Hosted office hours and tutoring sessions, helping students understand core programming concepts and debugging techniques.</p>
+            <p>Mentored students from first-time coders to confident developers—one student credited the experience with landing an AI startup internship and switching their major to CS. Lead recitations for 30 students and hosted office hours and tutoring sessions, helping students understand core programming concepts and debugging techniques.</p>
             <div class="experience-tags">
               <span class="tag">Python</span>
             </div>
@@ -275,7 +276,8 @@ layout: default
               </a>
               <span class="period">Jul 2023 - Aug 2023</span>
             </div>
-            <p>Developed computational tools for analyzing biological data and protein structures. Performed large data analysis using R and developed Linux pipelines for genome alignment and peak calling.</p>
+            <p>Built pipelines for genome alignment, streamlining the processing of large-scale genomic datasets. Contributed to ongoing genomic research, proving ISL1 is required for the development and survival of spiral
+ganglion neurons.</p>
             <div class="experience-tags">
               <span class="tag">R</span>
               <span class="tag">Python</span>
