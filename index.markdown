@@ -221,7 +221,7 @@ layout: default
               </a>
               <span class="period">Jun 2025 - Aug 2025</span>
             </div>
-            <p>Developed key features for Mosh, a social music app, including a rewards system and in-app store which boosted user engagement and retention. Worked in a rapid iteration cycle, integrating user feedback from testing sessions into same-day design pivots, learning the full stack on the job and optimizing for real-time performance. </p>
+            <p>Developed key features for <a href="https://apps.apple.com/us/app/mosh-music-with-friends/id6748318984" target="_blank">Mosh</a>, a social music app, including AI-generated posts and music recaps, which boosted user engagement and retention. Worked in a rapid iteration cycle, integrating user feedback from testing sessions into same-day design pivots, learning the full stack on the job and optimizing for real-time performance. </p>
             <div class="experience-tags">
               <span class="tag">Swift</span>
               <span class="tag">JavaScript</span>
