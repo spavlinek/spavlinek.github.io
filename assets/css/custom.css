@@ -1651,6 +1651,74 @@ code, pre {
   }
 }
 
+/* Featured Projects Section Styles */
+.featured-projects {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin: 2rem 0;
+}
+
+.project-item {
+  padding: 2.5rem;
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+/* Alternating background colors */
+.project-item:nth-child(odd) {
+  background: var(--background-color);
+}
+
+.project-item:nth-child(even) {
+  background: var(--background-alt);
+}
+
+.project-item h3 {
+  color: var(--text-color);
+  font-size: 1.75rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.project-item .project-subtitle {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.project-item .project-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+.project-item .project-link:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+/* Responsive adjustments for featured projects */
+@media (max-width: 768px) {
+  .featured-projects {
+    gap: 2rem;
+  }
+  
+  .project-item {
+    padding: 1.5rem;
+  }
+  
+  .project-item h3 {
+    font-size: 1.5rem;
+  }
+}
+
 /* Project Images Carousel Styles */
 .project-images {
   position: relative;
