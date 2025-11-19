@@ -24,27 +24,6 @@ Explore my software and app development, data science, and technical projects.
   </a>
 </div>
 
-## Research
-
-Explore my academic work and ongoing research projects.
-
-[View Research →](/projects/research/)
-
-<div class="project-preview-gallery">
-  <a href="/projects/research/#ai-assisted-learning" class="project-preview-item">
-    <img src="{{ '/assets/images/norilla/Screenshot 2025-08-02 at 19.14.06.png' | relative_url }}" alt="AI-Assisted Learning" />
-    <div class="project-preview-label">AI-Assisted Learning</div>
-  </a>
-  <a href="/projects/research/#simulated-facial-expression-generation" class="project-preview-item">
-    <img src="{{ '/assets/images/face/Screenshot 2025-08-02 at 17.18.41.png' | relative_url }}" alt="Facial Expression Research" />
-    <div class="project-preview-label">Facial Expression Research</div>
-  </a>
-  <a href="/projects/research/#computational-biology-research" class="project-preview-item">
-    <img src="{{ '/assets/images/Screenshot 2025-08-04 at 9.09.43.png' | relative_url }}" alt="Computational Biology Research" />
-    <div class="project-preview-label">Computational Biology Research</div>
-  </a>
-</div>
-
 ## Game Design Projects
 
 Discover my completed game design projects.
@@ -73,5 +52,27 @@ Discover my completed game design projects.
     <div class="project-preview-label">Sudoku</div>
   </a>
 </div>
+
+## Research
+
+Explore my academic work and ongoing research projects.
+
+[View Research →](/projects/research/)
+
+<div class="project-preview-gallery">
+  <a href="/projects/research/#ai-assisted-learning" class="project-preview-item">
+    <img src="{{ '/assets/images/norilla/Screenshot 2025-08-02 at 19.14.06.png' | relative_url }}" alt="AI-Assisted Learning" />
+    <div class="project-preview-label">AI-Assisted Learning</div>
+  </a>
+  <a href="/projects/research/#simulated-facial-expression-generation" class="project-preview-item">
+    <img src="{{ '/assets/images/face/Screenshot 2025-08-02 at 17.18.41.png' | relative_url }}" alt="Facial Expression Research" />
+    <div class="project-preview-label">Facial Expression Research</div>
+  </a>
+  <a href="/projects/research/#computational-biology-research" class="project-preview-item">
+    <img src="{{ '/assets/images/Screenshot 2025-08-04 at 9.09.43.png' | relative_url }}" alt="Computational Biology Research" />
+    <div class="project-preview-label">Computational Biology Research</div>
+  </a>
+</div>
+
 
 ---
