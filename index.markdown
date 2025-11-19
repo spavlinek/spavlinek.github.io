@@ -144,7 +144,6 @@ layout: default
         </button>
         </div>
     </div>
-  </div>
 
     <div class="project-item">
       <h3>Flytrap Adventures</h3>
@@ -198,6 +197,7 @@ layout: default
         </button>
         </div>
     </div>
+  </div>
 
   <section class="experience-section">
     <div class="experience-container">

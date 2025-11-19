@@ -1100,11 +1100,13 @@ code, pre {
   object-fit: contain;
   flex-shrink: 0;
   border-radius: 0.5rem;
+  order: 2;
 }
 
 .experience-details {
   flex: 1;
   min-width: 0;
+  order: 1;
 }
 
 .experience-item:hover {

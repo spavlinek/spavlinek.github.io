@@ -8,7 +8,8 @@ hide_title: true
 
 # Technical Projects
 
-Here you'll find a collection of my technical projects done outside of schoolwork. Most of these were done during hackathons and so are thus half-done. 
+Here you'll find a collection of my technical projects done outside of schoolwork. Most of these were done during hackathons and so are thus half-done. Make sure to check out my games as well, some of which are also technical projects: <a href="/projects/game-design/" class="project-link">My Game Design Projects →</a>
+
 
 ---
 ### Simulated Facial Expression Generation Project
