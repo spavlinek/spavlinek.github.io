@@ -86,9 +86,7 @@ layout: default
           </svg>
         </div>
         <h3>Development</h3>
-        <p>I build software solutions that make technology more accessible and bring people together, from mobile apps to research tools. 
-        
-        My technical experience comes not only from being a computer science major, but also from numerous technical projects that I've worked on over the years. </p>
+        <p>I build software solutions that make technology more accessible and bring people together, from mobile apps to research tools. <br><br> My technical experience comes not only from being a computer science major, but also from numerous technical projects that I've worked on over the years. </p>
       </div>
     </a>
     
@@ -100,9 +98,7 @@ layout: default
           </svg>
         </div>
         <h3>Research & Teaching</h3>
-        <p>I'm a Research Assistant at NoriLLA, where I develop AR educational games to study AI-assisted learning. 
-        
-        I've also taught programming fundamentals as a TA for a year.</p>
+        <p>I'm a Research Assistant at NoriLLA, where I develop AR educational games to study AI-assisted learning. <br><br> I've also taught programming fundamentals as a TA for a year.</p>
       </div>
     </a>
     
@@ -114,9 +110,7 @@ layout: default
           </svg>
         </div>
         <h3>Game Design</h3>
-        <p>I create games that challenge players with innovative mechanics and unexpected decisions. 
-        
-        My design projects span both digital and physical games, and they keep my creative spark alive.</p>
+        <p>I create games that challenge players with innovative mechanics and unexpected decisions.<br><br>My design projects span both digital and physical games, and they keep my creative spark alive.</p>
       </div>
     </a>
   </div>
