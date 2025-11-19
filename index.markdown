@@ -208,7 +208,7 @@ layout: default
         <div class="experience-content">
           <div class="experience-item">
             <div class="experience-header">
-              <h3>App development intern</h3>
+              <h3>Software Engineering intern</h3>
               <div class="nav-arrow">→</div>
             </div>
             <div class="experience-meta">
