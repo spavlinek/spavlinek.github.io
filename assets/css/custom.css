@@ -1090,7 +1090,7 @@ code, pre {
   position: relative;
   border-bottom: 1px solid var(--border-color);
   display: flex;
-  gap: 1.5rem;
+  gap: 3rem;
   align-items: flex-start;
 }
 
@@ -1135,17 +1135,7 @@ code, pre {
 }
 
 .nav-arrow {
-  font-size: 1.25rem;
-  color: var(--text-light);
-  opacity: 0.6;
-  transition: all 0.2s ease;
-  font-weight: 300;
-}
-
-.experience-item:hover .nav-arrow {
-  opacity: 1;
-  color: var(--primary-color);
-  transform: translateX(2px);
+  display: none;
 }
 
 .experience-meta {
