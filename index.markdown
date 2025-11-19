@@ -110,7 +110,7 @@ layout: default
           </svg>
         </div>
         <h3>Game Design</h3>
-        <p>I love designing (and playing) games and that challenge players with innovative mechanics and unexpected decisions.<br><br>My design projects span both digital and physical games, and they keep my creative spark alive.</p>
+        <p>I love designing (and playing) games that challenge players with innovative mechanics and unexpected decisions.<br><br>My design projects span both digital and physical games, and they keep my creative spark alive.</p>
       </div>
     </a>
   </div>
@@ -121,12 +121,12 @@ layout: default
 
   <div class="featured-projects">
     <div class="project-item">
-      <h3>Simulated Facial Expression Generation</h3>
-      <p class="project-subtitle">CMU RASL Research Project</p>
+      <h3>AI-Assisted Learning Research</h3>
+      <p class="project-subtitle">NoriLLA Research Position</p>
       
-      <p>Designed and implemented a Python-based face model using PyQt5 for dynamic facial expression transitions, integrated into a personal trainer robot for real-time interactions.</p>
+      <p>Developing an augmented reality game with computer vision to improve children's STEM learning outcomes. The research explores how AI feedback enhances learning while increasing dialogue and collaboration between children and parents—analyzed using OpenAI's Whisper for conversation transcription.</p>
       
-      <a href="/projects/technical/" class="project-link">View More of My Technical Projects →</a>
+      <a href="/projects/research/" class="project-link">View More of My Research →</a>
       <div class="project-images">
         <button class="carousel-nav prev">
             <svg viewBox="0 0 24 24">
@@ -134,9 +134,8 @@ layout: default
             </svg>
         </button>
         <div class="project-images-container">
-            <img src="{{ '/assets/images/face/ezgif-43f48114e79780.gif' | relative_url }}" alt="Face simulation - expression transitions" />
-            <img src="{{ '/assets/images/face/ezgif-43802e8aab12f2.gif' | relative_url }}" alt="Face simulation - dynamic expressions" />
-            <img src="{{ '/assets/images/face/Screenshot 2025-08-02 at 17.18.41.png' | relative_url }}" alt="Face simulation interface" />
+            <img src="{{ '/assets/images/norilla/Screenshot 2025-08-02 at 19.14.06.png' | relative_url }}" alt="norilla 1" />
+            <img src="{{ '/assets/images/norilla/Screenshot 2025-08-02 at 19.14.16.png' | relative_url }}" alt="Face simulation - norilla 2" />
         </div>
         <button class="carousel-nav next">
             <svg viewBox="0 0 24 24">
@@ -145,6 +144,7 @@ layout: default
         </button>
         </div>
     </div>
+  </div>
 
     <div class="project-item">
       <h3>Flytrap Adventures</h3>
@@ -174,12 +174,12 @@ layout: default
     </div>
 
     <div class="project-item">
-      <h3>AI-Assisted Learning Research</h3>
-      <p class="project-subtitle">NoriLLA Research Position</p>
+      <h3>Simulated Facial Expression Generation</h3>
+      <p class="project-subtitle">CMU RASL Research Project</p>
       
-      <p>Currently analyzing conversational data using OpenAI's Whisper to extract insights about AI-assisted learning, while developing augmented reality experiences with computer vision.</p>
+      <p>Designed and implemented a Python-based face model using PyQt5 for dynamic facial expression transitions, integrated into a personal trainer robot for real-time interactions.</p>
       
-      <a href="/projects/research/" class="project-link">View More of My Research →</a>
+      <a href="/projects/technical/" class="project-link">View More of My Technical Projects →</a>
       <div class="project-images">
         <button class="carousel-nav prev">
             <svg viewBox="0 0 24 24">
@@ -187,8 +187,9 @@ layout: default
             </svg>
         </button>
         <div class="project-images-container">
-            <img src="{{ '/assets/images/norilla/Screenshot 2025-08-02 at 19.14.06.png' | relative_url }}" alt="norilla 1" />
-            <img src="{{ '/assets/images/norilla/Screenshot 2025-08-02 at 19.14.16.png' | relative_url }}" alt="Face simulation - norilla 2" />
+            <img src="{{ '/assets/images/face/ezgif-43f48114e79780.gif' | relative_url }}" alt="Face simulation - expression transitions" />
+            <img src="{{ '/assets/images/face/ezgif-43802e8aab12f2.gif' | relative_url }}" alt="Face simulation - dynamic expressions" />
+            <img src="{{ '/assets/images/face/Screenshot 2025-08-02 at 17.18.41.png' | relative_url }}" alt="Face simulation interface" />
         </div>
         <button class="carousel-nav next">
             <svg viewBox="0 0 24 24">
@@ -197,7 +198,6 @@ layout: default
         </button>
         </div>
     </div>
-  </div>
 
   <section class="experience-section">
     <div class="experience-container">
@@ -207,76 +207,88 @@ layout: default
       <div class="experience-right">
         <div class="experience-content">
           <div class="experience-item">
-            <div class="experience-header">
-              <h3>Software Engineering intern</h3>
-              <div class="nav-arrow">→</div>
-            </div>
-            <div class="experience-meta">
-              <a href="https://www.useconfetti.com/" class="company-link" target="_blank" rel="noopener">
-                <span class="company">Confetti</span>
-              </a>
-              <span class="period">Jun 2025 - Aug 2025</span>
-            </div>
-            <p>Developed key features for <a href="https://apps.apple.com/us/app/mosh-music-with-friends/id6748318984" target="_blank">Mosh</a>, a social music app, including AI-generated posts and music recaps, which boosted user engagement and retention. Worked in a rapid iteration cycle, integrating user feedback from testing sessions into same-day design pivots, learning the full stack on the job and optimizing for real-time performance. </p>
-            <div class="experience-tags">
-              <span class="tag">Swift</span>
-              <span class="tag">JavaScript</span>
+            <img src="/assets/images/workExperiences/confetti.jpg" alt="Confetti logo" class="experience-logo">
+            <div class="experience-details">
+              <div class="experience-header">
+                <h3>Software Engineering intern</h3>
+                <div class="nav-arrow">→</div>
+              </div>
+              <div class="experience-meta">
+                <a href="https://www.useconfetti.com/" class="company-link" target="_blank" rel="noopener">
+                  <span class="company">Confetti</span>
+                </a>
+                <span class="period">Jun 2025 - Aug 2025</span>
+              </div>
+              <p>Developed key features for <a href="https://apps.apple.com/us/app/mosh-music-with-friends/id6748318984" target="_blank">Mosh</a>, a social music app, including AI-generated posts and music recaps, which boosted user engagement and retention. Worked in a rapid iteration cycle, integrating user feedback from testing sessions into same-day design pivots, learning the full stack on the job and optimizing for real-time performance. </p>
+              <div class="experience-tags">
+                <span class="tag">Swift</span>
+                <span class="tag">JavaScript</span>
+              </div>
             </div>
           </div>
           
           <div class="experience-item">
-            <div class="experience-header">
-              <h3>Research Assistant & Programming Intern</h3>
-              <div class="nav-arrow">→</div>
-            </div>
-            <div class="experience-meta">
-              <a href="https://norilla.com" class="company-link" target="_blank" rel="noopener">
-                <span class="company">NoriLLA</span>
-              </a>
-              <span class="period">Jun 2024 - May 2025 </span>
-            </div>
-            <p> Implemented an AR game that uses AI to provably improve children’s learning of STEM concepts. Analyzed gameplay conversations using OpenAI’s Whisper, uncovering that AI feedback led to increased
+            <img src="/assets/images/workExperiences/norilla.webp" alt="NoriLLA logo" class="experience-logo">
+            <div class="experience-details">
+              <div class="experience-header">
+                <h3>Research Assistant & Programming Intern</h3>
+                <div class="nav-arrow">→</div>
+              </div>
+              <div class="experience-meta">
+                <a href="https://norilla.com" class="company-link" target="_blank" rel="noopener">
+                  <span class="company">NoriLLA</span>
+                </a>
+                <span class="period">Jun 2024 - May 2025 </span>
+              </div>
+              <p> Implemented an AR game that uses AI to provably improve children's learning of STEM concepts. Analyzed gameplay conversations using OpenAI's Whisper, uncovering that AI feedback led to increased
 dialogue and collaboration between children and parents. </p>
-            <div class="experience-tags">
-              <span class="tag">Java</span>
-              <span class="tag">Processing</span>
-              <span class="tag">Python</span>
+              <div class="experience-tags">
+                <span class="tag">Java</span>
+                <span class="tag">Processing</span>
+                <span class="tag">Python</span>
+              </div>
             </div>
           </div>
           
           <div class="experience-item">
-            <div class="experience-header">
-              <h3>Teaching Assistant of Fundamentals of Programming</h3>
-              <div class="nav-arrow">→</div>
-            </div>
-            <div class="experience-meta">
-              <a href="https://www.cmu.edu" class="company-link" target="_blank" rel="noopener">
-                <span class="company">Carnegie Mellon University</span>
-              </a>
-              <span class="period">Jan 2024 - Dec 2024</span>
-            </div>
-            <p>Mentored students from first-time coders to confident developers—one student credited the experience with landing an AI startup internship and switching their major to CS. Lead recitations for 30 students and hosted office hours and tutoring sessions, helping students understand core programming concepts and debugging techniques.</p>
-            <div class="experience-tags">
-              <span class="tag">Python</span>
+            <img src="/assets/images/workExperiences/cmu.png" alt="CMU logo" class="experience-logo">
+            <div class="experience-details">
+              <div class="experience-header">
+                <h3>Teaching Assistant of Fundamentals of Programming</h3>
+                <div class="nav-arrow">→</div>
+              </div>
+              <div class="experience-meta">
+                <a href="https://www.cmu.edu" class="company-link" target="_blank" rel="noopener">
+                  <span class="company">Carnegie Mellon University</span>
+                </a>
+                <span class="period">Jan 2024 - Dec 2024</span>
+              </div>
+              <p>Mentored students from first-time coders to confident developers—one student credited the experience with landing an AI startup internship and switching their major to CS. Lead recitations for 30 students and hosted office hours and tutoring sessions, helping students understand core programming concepts and debugging techniques.</p>
+              <div class="experience-tags">
+                <span class="tag">Python</span>
+              </div>
             </div>
           </div>
           
           <div class="experience-item">
-            <div class="experience-header">
-              <h3>Computational Biology Intern</h3>
-              <div class="nav-arrow">→</div>
-            </div>
-            <div class="experience-meta">
-              <a href="https://www.ibt.cas.cz/en/" class="company-link" target="_blank" rel="noopener">
-                <span class="company">Institute of Biotechnology CAS</span>
-              </a>
-              <span class="period">Jul 2023 - Aug 2023</span>
-            </div>
-            <p>Built pipelines for genome alignment, streamlining the processing of large-scale genomic datasets. Contributed to ongoing genomic research, proving ISL1 is required for the development and survival of spiral
+            <img src="/assets/images/workExperiences/logo_ibt.svg" alt="Institute of Biotechnology logo" class="experience-logo">
+            <div class="experience-details">
+              <div class="experience-header">
+                <h3>Computational Biology Intern</h3>
+                <div class="nav-arrow">→</div>
+              </div>
+              <div class="experience-meta">
+                <a href="https://www.ibt.cas.cz/en/" class="company-link" target="_blank" rel="noopener">
+                  <span class="company">Institute of Biotechnology CAS</span>
+                </a>
+                <span class="period">Jul 2023 - Aug 2023</span>
+              </div>
+              <p>Built pipelines for genome alignment, streamlining the processing of large-scale genomic datasets. Contributed to ongoing genomic research, proving ISL1 is required for the development and survival of spiral
 ganglion neurons.</p>
-            <div class="experience-tags">
-              <span class="tag">R</span>
-              <span class="tag">Python</span>
+              <div class="experience-tags">
+                <span class="tag">R</span>
+                <span class="tag">Python</span>
+              </div>
             </div>
           </div>
         </div>

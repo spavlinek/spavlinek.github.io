@@ -8,7 +8,7 @@ hide_title: true
 
 # Technical Projects
 
-Here you'll find a collection of my technical projects done outside of schoolwork. Most of these were done during hackathons and so are thus half-done.
+Here you'll find a collection of my technical projects done outside of schoolwork. Most of these were done during hackathons and so are thus half-done. 
 
 ---
 ### Simulated Facial Expression Generation Project
@@ -32,6 +32,35 @@ Designed and implemented a Python-based facial model using PyQt5 to simulate dyn
     <img src="{{ '/assets/images/face/ezgif-43f48114e79780.gif' | relative_url }}" alt="Face simulation - expression transitions" />
     <img src="{{ '/assets/images/face/ezgif-43802e8aab12f2.gif' | relative_url }}" alt="Face simulation - dynamic expressions" />
     <img src="{{ '/assets/images/face/Screenshot 2025-08-02 at 17.18.41.png' | relative_url }}" alt="Face simulation interface" />
+  </div>
+  <button class="carousel-nav next">
+    <svg viewBox="0 0 24 24">
+      <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+    </svg>
+  </button>
+</div>
+
+---
+### VERVIT Mobile App
+*Technologies: Flutter, Android Studios*  
+*March - November 2021*
+
+VERVIT is a mobile app built to help seniors navigate digital technology with confidence. Inspired by the isolation faced by elderly individuals during the COVID-19 pandemic, the app focused on accessibility, intuitive navigation, and simplified interfaces to promote digital inclusion. As the head of the design in addition to being a programmer, I conducted hands-on testing with older users to iteratively refine the design and ensure every interaction was tailored to their needs.
+
+[View on github →](https://github.com/Vervit-cz/Vervit_Application)
+
+<div class="project-images">
+  <button class="carousel-nav prev">
+    <svg viewBox="0 0 24 24">
+      <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+    </svg>
+  </button>
+  <div class="project-images-container">
+    <img src="{{ '/assets/images/vervit/Screenshot 2025-08-02 at 17.41.00.png' | relative_url }}" alt="vervit 1" />
+    <img src="{{ '/assets/images/vervit/Screenshot 2025-08-02 at 17.41.17.png' | relative_url }}" alt="vervit 2" />
+    <img src="{{ '/assets/images/vervit/Screenshot 2025-08-02 at 17.41.53.png' | relative_url }}" alt="vervit 3" />
+    <img src="{{ '/assets/images/vervit/Screenshot 2025-08-02 at 19.52.44.png' | relative_url }}" alt="vervit 3" />
+    <img src="{{ '/assets/images/vervit/Screenshot 2025-08-02 at 19.53.34.png' | relative_url }}" alt="vervit 3" />
   </div>
   <button class="carousel-nav next">
     <svg viewBox="0 0 24 24">
@@ -71,34 +100,5 @@ Vesmir is an immersive, space-themed web app that transforms users' Spotify data
 
 [View on github →](https://github.com/spavlinek/vesmir)
 
-
----
-### VERVIT Mobile App
-*Technologies: Flutter, Android Studios*  
-*March - November 2021*
-
-VERVIT is a mobile app built to help seniors navigate digital technology with confidence. Inspired by the isolation faced by elderly individuals during the COVID-19 pandemic, the app focused on accessibility, intuitive navigation, and simplified interfaces to promote digital inclusion. As the head of the design in addition to being a programmer, I conducted hands-on testing with older users to iteratively refine the design and ensure every interaction was tailored to their needs.
-
-[View on github →](https://github.com/Vervit-cz/Vervit_Application)
-
-<div class="project-images">
-  <button class="carousel-nav prev">
-    <svg viewBox="0 0 24 24">
-      <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
-    </svg>
-  </button>
-  <div class="project-images-container">
-    <img src="{{ '/assets/images/vervit/Screenshot 2025-08-02 at 17.41.00.png' | relative_url }}" alt="vervit 1" />
-    <img src="{{ '/assets/images/vervit/Screenshot 2025-08-02 at 17.41.17.png' | relative_url }}" alt="vervit 2" />
-    <img src="{{ '/assets/images/vervit/Screenshot 2025-08-02 at 17.41.53.png' | relative_url }}" alt="vervit 3" />
-    <img src="{{ '/assets/images/vervit/Screenshot 2025-08-02 at 19.52.44.png' | relative_url }}" alt="vervit 3" />
-    <img src="{{ '/assets/images/vervit/Screenshot 2025-08-02 at 19.53.34.png' | relative_url }}" alt="vervit 3" />
-  </div>
-  <button class="carousel-nav next">
-    <svg viewBox="0 0 24 24">
-      <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
-    </svg>
-  </button>
-</div>
 
 ---
