@@ -208,6 +208,10 @@
   .landing-content {
     padding: 1rem;
   }
+  
+  .game-instructions {
+    display: none !important;
+  }
 }
 
 /* Typography */

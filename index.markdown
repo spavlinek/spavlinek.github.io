@@ -8,16 +8,12 @@ layout: default
     <h1>Hi, I'm Sara <img src="/assets/images/sara_front.png" alt="Sara avatar" style="height:6rem;vertical-align:bottom;margin-left:0.1em;"></h1>
     
     <p class="landing-intro">
-      I'm a computer science senior at CMU with an interest in human-computer interaction who designs games for fun.
+      I'm a product engineer building at the intersection of HCI and software who designs games for fun.
     </p>
 
     <!-- Game Instructions -->
     <div class="game-instructions" id="game-instructions">
-      <div class="arrow-keys">
-        <img src="/assets/images/minigame/arrowKeyLeft.png" alt="Left arrow key" class="arrow-key-img">
-        <img src="/assets/images/minigame/arrowKeyRight.png" alt="Right arrow key" class="arrow-key-img">
-      </div>
-      <p class="press-to-play">Press to Play</p>
+      <p class="press-to-play">Press the Arrow Keys to Play < > </p>
     </div>
 
     <!-- Scroll Down Indicator -->
