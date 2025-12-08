@@ -121,12 +121,44 @@ layout: default
 
   <div class="featured-projects">
     <div class="project-item">
+      <h3>Mosh</h3>
+      <p class="project-subtitle">Social Music App</p>
+      
+      <p>Mosh is a social music app that brings friends together through shared music experiences. It includes AI-generated posts, a leaderboard, a discover playlists page, and music recaps. I developed this as a Software Engineering Intern at Confetti. </p>
+      
+      <a href="https://apps.apple.com/us/app/mosh-music-with-friends/id6748318984" class="project-link" target="_blank" rel="noopener">Download on App Store →</a>
+      
+      <a href="/projects/technical/" class="project-link">View More of My Technical Projects →</a>
+      <div class="project-images">
+        <button class="carousel-nav prev">
+            <svg viewBox="0 0 24 24">
+            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+            </svg>
+        </button>
+        <div class="project-images-container">
+            <img src="{{ '/assets/images/Mosh/IMG_6788.PNG' | relative_url }}" alt="Mosh app interface" />
+            <img src="{{ '/assets/images/Mosh/IMG_6789.PNG' | relative_url }}" alt="Mosh social features" />
+            <img src="{{ '/assets/images/Mosh/IMG_6790.PNG' | relative_url }}" alt="Mosh music recap" />
+            <img src="{{ '/assets/images/Mosh/IMG_6791.PNG' | relative_url }}" alt="Mosh AI posts" />
+            <img src="{{ '/assets/images/Mosh/IMG_6792.PNG' | relative_url }}" alt="Mosh music sharing" />
+            <img src="{{ '/assets/images/Mosh/IMG_6793.PNG' | relative_url }}" alt="Mosh user experience" />
+        </div>
+        <button class="carousel-nav next">
+            <svg viewBox="0 0 24 24">
+            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+            </svg>
+        </button>
+        </div>
+    </div>
+
+    <div class="project-item">
       <h3>MoonShroom</h3>
       <p class="project-subtitle">2D Platformer Game</p>
       
       <p> Developed and designed this 2D platformer which follows an astronaut exploring an alien planet overgrown with giant mushrooms. It has 3 uniquely designed levels with an additional boss level at the end along with a variety of enemies and environments. If you have the time go play it!</p>
       
       <a href="https://sarumangames.itch.io/moonshroom" class="project-link" target="_blank" rel="noopener">Play on itch.io →</a>
+      
       <a href="/projects/game-design/" class="project-link">View More of My Game Design →</a>
       <div class="project-images">
         <button class="carousel-nav prev">
