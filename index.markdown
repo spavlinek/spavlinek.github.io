@@ -136,9 +136,9 @@ layout: default
             </svg>
         </button>
         <div class="project-images-container">
-            <img src="{{ '/assets/images/Mosh/IMG_6788.PNG' | relative_url }}" alt="Mosh app interface" />
             <img src="{{ '/assets/images/Mosh/IMG_6789.PNG' | relative_url }}" alt="Mosh social features" />
             <img src="{{ '/assets/images/Mosh/IMG_6790.PNG' | relative_url }}" alt="Mosh music recap" />
+            <img src="{{ '/assets/images/Mosh/IMG_6788.PNG' | relative_url }}" alt="Mosh app interface" />
             <img src="{{ '/assets/images/Mosh/IMG_6791.PNG' | relative_url }}" alt="Mosh AI posts" />
             <img src="{{ '/assets/images/Mosh/IMG_6792.PNG' | relative_url }}" alt="Mosh music sharing" />
             <img src="{{ '/assets/images/Mosh/IMG_6793.PNG' | relative_url }}" alt="Mosh user experience" />

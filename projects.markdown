@@ -19,7 +19,7 @@ Explore my software, app development, and computer game projects.
     <div class="project-preview-label">MoonShroom</div>
   </a>
   <a href="/projects/technical/#mosh---social-music-app" class="project-preview-item">
-    <img src="{{ '/assets/images/Mosh/IMG_6788.PNG' | relative_url }}" alt="Mosh Social Music App" />
+    <img src="{{ '/assets/images/Mosh/IMG_6789.PNG' | relative_url }}" alt="Mosh Social Music App" />
     <div class="project-preview-label">Mosh - Social Music App</div>
   </a>
   <a href="/projects/technical/#sudoku" class="project-preview-item">
