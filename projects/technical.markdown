@@ -8,8 +8,63 @@ hide_title: true
 
 # Technical Projects
 
-Here you'll find a collection of my technical projects done outside of schoolwork. Most of these were done during hackathons and so are thus half-done. Make sure to check out my games as well, some of which are also technical projects: <a href="/projects/game-design/" class="project-link">My Game Design Projects →</a>
+Here you'll find a collection of my technical projects done outside of schoolwork. You'll see the computer games I've developed, as well as some of the apps I've worked on. Most of these were done during hackathons and so are thus half-done.
 
+---
+### MoonShroom
+*Technologies: Unity, C#*  
+*October - December 2024*
+
+Developed and designed this 2D platformer which follows an astronaut exploring an alien planet overgrown with giant mushrooms. It has 3 uniquely designed levels with an additional boss level at the end along with a variety of enemies and environments. If you have the time go play it!
+
+[Play on itch.io →](https://sarumangames.itch.io/moonshroom)
+
+<div class="project-images">
+  <button class="carousel-nav prev">
+    <svg viewBox="0 0 24 24">
+      <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+    </svg>
+  </button>
+  <div class="project-images-container">
+    <img src="{{ '/assets/images/MoonShroom/im1.png' | relative_url }}" alt="MoonShroom gameplay" />
+    <img src="{{ '/assets/images/MoonShroom/im2.png' | relative_url }}" alt="MoonShroom level design" />
+    <img src="{{ '/assets/images/MoonShroom/im3.png' | relative_url }}" alt="MoonShroom mechanics" />
+    <img src="{{ '/assets/images/MoonShroom/im4.png' | relative_url }}" alt="MoonShroom environment" />
+  </div>
+  <button class="carousel-nav next">
+    <svg viewBox="0 0 24 24">
+      <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+    </svg>
+  </button>
+</div>
+
+---
+### Sudoku
+*Technologies: Python*  
+*November - December 2022*
+
+A custom Sudoku game built from scratch in Python, inspired by NYT Sudoku. Features intelligent hint generation using backtracking algorithms, multiple difficulty levels, and a clean interface. Includes accessibility options for keyboard-only navigation, mouse-free play, and customizable color schemes for colorblind users.
+
+[View on github →](https://github.com/spavlinek/sudoku)
+
+<div class="project-images">
+  <button class="carousel-nav prev">
+    <svg viewBox="0 0 24 24">
+      <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+    </svg>
+  </button>
+  <div class="project-images-container">
+    <img src="{{ '/assets/images/sudoku/Screenshot 2025-08-02 at 15.38.10.png' | relative_url }}" alt="Sudoku features" />
+    <img src="{{ '/assets/images/sudoku/Screenshot 2025-08-02 at 15.39.56.png' | relative_url }}" alt="Sudoku game interface" />
+    <img src="{{ '/assets/images/sudoku/Screenshot 2025-08-02 at 15.38.55.png' | relative_url }}" alt="Sudoku gameplay" />
+    <img src="{{ '/assets/images/sudoku/Screenshot 2025-08-02 at 16.09.44.png' | relative_url }}" alt="Sudoku hint" />
+  </div>
+  <button class="carousel-nav next">
+    <svg viewBox="0 0 24 24">
+      <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+    </svg>
+  </button>
+</div>
 
 ---
 ### Simulated Facial Expression Generation Project
@@ -33,6 +88,36 @@ Designed and implemented a Python-based facial model using PyQt5 to simulate dyn
     <img src="{{ '/assets/images/face/ezgif-43f48114e79780.gif' | relative_url }}" alt="Face simulation - expression transitions" />
     <img src="{{ '/assets/images/face/ezgif-43802e8aab12f2.gif' | relative_url }}" alt="Face simulation - dynamic expressions" />
     <img src="{{ '/assets/images/face/Screenshot 2025-08-02 at 17.18.41.png' | relative_url }}" alt="Face simulation interface" />
+  </div>
+  <button class="carousel-nav next">
+    <svg viewBox="0 0 24 24">
+      <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+    </svg>
+  </button>
+</div>
+
+---
+### Flytrap Adventures
+*Technologies: Unity, C#*  
+*January - May 2023*
+
+A 2D platformer where players navigate a flytrap through a dynamic greenhouse environment. The game has innovative movement mechanics unique to the flytrap character, environmental storytelling, and dynamic level design. This game was created by a team from CMU's Game Creation Society that I was a part of for one semester as a level designer and a programmer.
+
+[View on github →](https://github.com/Eli-bassoon/Super-Flytrap-Adventures)
+
+[Play on itch.io →](https://kequals.itch.io/super-flytrap-adventures-gcs)
+
+<div class="project-images">
+  <button class="carousel-nav prev">
+    <svg viewBox="0 0 24 24">
+      <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+    </svg>
+  </button>
+  <div class="project-images-container">
+    <img src="{{ '/assets/images/Flytrap/n8mDxt.png' | relative_url }}" alt="Flytrap Adventures gameplay" />
+    <img src="{{ '/assets/images/Flytrap/jJXk8j.png' | relative_url }}" alt="Flytrap Adventures level design" />
+    <img src="{{ '/assets/images/Flytrap/4t6iaa.png' | relative_url }}" alt="Flytrap Adventures mechanics" />
+    <img src="{{ '/assets/images/Flytrap/wdEpRI.png' | relative_url }}" alt="Flytrap Adventures environment" />
   </div>
   <button class="carousel-nav next">
     <svg viewBox="0 0 24 24">
@@ -81,6 +166,34 @@ Grow is an virtual plant-growing experience that encouraged real-life plant care
 virtual plant before purchasing a live houseplant to train plant maintenance. The project combined digital engagement with real-world environmental consciousness, demonstrating creative problem-solving in sustainability technology. Won Meta's Sponsor Challenge: Best hack to help people connect, explore and unlock opportunities in the metaverse.
 
 [View on github →](https://github.com/spavlinek/grow)
+
+---
+### Bob the Square
+*Technologies: Unity, C#*  
+*November 2022*
+
+Bob the Square is a minimalist platform game that follows Bob the Square on his adventures through two levels. Bob can jump, and move horizontally on platforms and vertically on walls. This is my first platformer (and game) I made in Unity!
+
+[View on github →](https://github.com/spavlinek/Bob-the-Square)
+
+<div class="project-images">
+  <button class="carousel-nav prev">
+    <svg viewBox="0 0 24 24">
+      <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+    </svg>
+  </button>
+  <div class="project-images-container">
+    <img src="{{ '/assets/images/Bob/Screenshot 2025-08-02 at 16.09.16.png' | relative_url }}" alt="Bob the Square mechanics" />
+    <img src="{{ '/assets/images/Bob/Screenshot 2025-08-02 at 15.31.19.png' | relative_url }}" alt="Bob the Square mechanics" />
+    <img src="{{ '/assets/images/Bob/Screenshot 2025-08-02 at 15.32.30.png' | relative_url }}" alt="Bob the Square gameplay" />
+    <img src="{{ '/assets/images/Bob/Screenshot 2025-08-02 at 15.31.42.png' | relative_url }}" alt="Bob the Square level" />
+  </div>
+  <button class="carousel-nav next">
+    <svg viewBox="0 0 24 24">
+      <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+    </svg>
+  </button>
+</div>
 
 ---
 ### 'SobStory' 

@@ -7,6 +7,34 @@ hide_title: true
 
 # Game Design Projects
 
+### MoonShroom
+*Platform: PC | Engine: Unity*  
+*October - December 2025*
+
+Developed and designed this 2D platformer which follows an astronaut exploring an alien planet overgrown with giant mushrooms. It has 3 uniquely designed levels with an additional boss level at the end along with a variety of enemies and environments. If you have the time go play it!
+
+[Play on itch.io →](https://sarumangames.itch.io/moonshroom)
+
+<div class="project-images">
+  <button class="carousel-nav prev">
+    <svg viewBox="0 0 24 24">
+      <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+    </svg>
+  </button>
+  <div class="project-images-container">
+    <img src="{{ '/assets/images/MoonShroom/im1.png' | relative_url }}" alt="MoonShroom gameplay" />
+    <img src="{{ '/assets/images/MoonShroom/im2.png' | relative_url }}" alt="MoonShroom level design" />
+    <img src="{{ '/assets/images/MoonShroom/im3.png' | relative_url }}" alt="MoonShroom mechanics" />
+    <img src="{{ '/assets/images/MoonShroom/im4.png' | relative_url }}" alt="MoonShroom environment" />
+  </div>
+  <button class="carousel-nav next">
+    <svg viewBox="0 0 24 24">
+      <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+    </svg>
+  </button>
+</div>
+
+---
 
 ### Sudoku
 *Platform: PC | Engine: Python*  

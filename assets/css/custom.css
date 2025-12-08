@@ -1690,7 +1690,7 @@ code, pre {
 }
 
 .project-item:nth-child(even) {
-  background: var(--background-alt);
+  background: rgba(38, 88, 40, 0.08);
 }
 
 .project-item h3 {

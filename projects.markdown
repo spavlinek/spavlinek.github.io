@@ -31,6 +31,10 @@ Discover my completed game design projects.
 [View Game Design projects →](/projects/game-design/)
 
 <div class="project-preview-gallery">
+  <a href="/projects/game-design/#moonshroom" class="project-preview-item">
+    <img src="{{ '/assets/images/MoonShroom/im1.png' | relative_url }}" alt="MoonShroom" />
+    <div class="project-preview-label">MoonShroom</div>
+  </a>
   <a href="/projects/game-design/#whispers-of-the-forest" class="project-preview-item">
     <img src="{{ '/assets/images/WhisperOfTheForest/HuXtug.png' | relative_url }}" alt="Whispers of the Forest" />
     <div class="project-preview-label">Whispers of the Forest</div>

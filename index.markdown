@@ -121,6 +121,34 @@ layout: default
 
   <div class="featured-projects">
     <div class="project-item">
+      <h3>MoonShroom</h3>
+      <p class="project-subtitle">2D Platformer Game</p>
+      
+      <p> Developed and designed this 2D platformer which follows an astronaut exploring an alien planet overgrown with giant mushrooms. It has 3 uniquely designed levels with an additional boss level at the end along with a variety of enemies and environments. If you have the time go play it!</p>
+      
+      <a href="https://sarumangames.itch.io/moonshroom" class="project-link" target="_blank" rel="noopener">Play on itch.io →</a>
+      <a href="/projects/game-design/" class="project-link">View More of My Game Design →</a>
+      <div class="project-images">
+        <button class="carousel-nav prev">
+            <svg viewBox="0 0 24 24">
+            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+            </svg>
+        </button>
+        <div class="project-images-container">
+            <img src="{{ '/assets/images/MoonShroom/im1.png' | relative_url }}" alt="MoonShroom gameplay" />
+            <img src="{{ '/assets/images/MoonShroom/im2.png' | relative_url }}" alt="MoonShroom level design" />
+            <img src="{{ '/assets/images/MoonShroom/im3.png' | relative_url }}" alt="MoonShroom mechanics" />
+            <img src="{{ '/assets/images/MoonShroom/im4.png' | relative_url }}" alt="MoonShroom environment" />
+        </div>
+        <button class="carousel-nav next">
+            <svg viewBox="0 0 24 24">
+            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+            </svg>
+        </button>
+        </div>
+    </div>
+
+    <div class="project-item">
       <h3>AI-Assisted Learning Research</h3>
       <p class="project-subtitle">NoriLLA Research Position</p>
       
@@ -136,33 +164,6 @@ layout: default
         <div class="project-images-container">
             <img src="{{ '/assets/images/norilla/Screenshot 2025-08-02 at 19.14.06.png' | relative_url }}" alt="norilla 1" />
             <img src="{{ '/assets/images/norilla/Screenshot 2025-08-02 at 19.14.16.png' | relative_url }}" alt="Face simulation - norilla 2" />
-        </div>
-        <button class="carousel-nav next">
-            <svg viewBox="0 0 24 24">
-            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
-            </svg>
-        </button>
-        </div>
-    </div>
-
-    <div class="project-item">
-      <h3>Flytrap Adventures</h3>
-      <p class="project-subtitle">2D Platformer Game</p>
-      
-      <p> With a team from CMU's Game Creation Society, created a 2D platformer where players navigate a flytrap through a dynamic greenhouse environment, showcasing innovative game mechanics and environmental storytelling. </p>
-      
-      <a href="/projects/game-design/" class="project-link">View More of My Game Design →</a>
-      <div class="project-images">
-        <button class="carousel-nav prev">
-            <svg viewBox="0 0 24 24">
-            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
-            </svg>
-        </button>
-        <div class="project-images-container">
-            <img src="{{ '/assets/images/Flytrap/n8mDxt.png' | relative_url }}" alt="Flytrap Adventures gameplay" />
-            <img src="{{ '/assets/images/Flytrap/jJXk8j.png' | relative_url }}" alt="Flytrap Adventures level design" />
-            <img src="{{ '/assets/images/Flytrap/4t6iaa.png' | relative_url }}" alt="Flytrap Adventures mechanics" />
-            <img src="{{ '/assets/images/Flytrap/wdEpRI.png' | relative_url }}" alt="Flytrap Adventures environment" />
         </div>
         <button class="carousel-nav next">
             <svg viewBox="0 0 24 24">
