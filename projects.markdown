@@ -9,11 +9,23 @@ Welcome to my projects portfolio! Here you'll find a collection of my projects a
 
 ## Technical projects
 
-Explore my software and app development, data science, and technical projects.
+Explore my software, app development, and computer game projects.
 
 [View Technical Projects →](/projects/technical/)
 
 <div class="project-preview-gallery">
+  <a href="/projects/technical/#moonshroom" class="project-preview-item">
+    <img src="{{ '/assets/images/MoonShroom/im1.png' | relative_url }}" alt="MoonShroom" />
+    <div class="project-preview-label">MoonShroom</div>
+  </a>
+  <a href="/projects/technical/#mosh---social-music-app" class="project-preview-item">
+    <img src="{{ '/assets/images/Mosh/IMG_6788.PNG' | relative_url }}" alt="Mosh Social Music App" />
+    <div class="project-preview-label">Mosh - Social Music App</div>
+  </a>
+  <a href="/projects/technical/#sudoku" class="project-preview-item">
+    <img src="{{ '/assets/images/sudoku/Screenshot 2025-08-02 at 15.38.10.png' | relative_url }}" alt="Sudoku" />
+    <div class="project-preview-label">Sudoku</div>
+  </a>
   <a href="/projects/technical/#simulated-facial-expression-generation-project" class="project-preview-item">
     <img src="{{ '/assets/images/face/ezgif-43f48114e79780.gif' | relative_url }}" alt="Facial Expression Generation" />
     <div class="project-preview-label">Facial Expression Generation</div>
@@ -59,7 +71,7 @@ Discover my completed game design projects.
 
 ## Research
 
-Explore my academic work and ongoing research projects.
+Explore my previous academic work and ongoing research projects.
 
 [View Research →](/projects/research/)
 

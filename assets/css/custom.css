@@ -1686,11 +1686,11 @@ code, pre {
 
 /* Alternating background colors */
 .project-item:nth-child(odd) {
-  background: var(--background-color);
+  background: rgba(38, 88, 40, 0.08);
 }
 
 .project-item:nth-child(even) {
-  background: rgba(38, 88, 40, 0.08);
+  background: var(--background-color);
 }
 
 .project-item h3 {

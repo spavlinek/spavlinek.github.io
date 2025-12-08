@@ -11,6 +11,36 @@ hide_title: true
 Here you'll find a collection of my technical projects done outside of schoolwork. You'll see the computer games I've developed, as well as some of the apps I've worked on. Most of these were done during hackathons and so are thus half-done.
 
 ---
+### Mosh - Social Music App
+*Technologies: Swift, JavaScript*  
+*Confetti | June 2025 - August 2025*
+
+Mosh is a social music app that brings friends together through shared music experiences. It includes AI-generated posts, a leaderboard, a discover playlists page, and music recaps. I developed this as a Software Engineering Intern at Confetti.
+
+[Download on the App Store →](https://apps.apple.com/us/app/mosh-music-with-friends/id6748318984)
+
+<div class="project-images">
+  <button class="carousel-nav prev">
+    <svg viewBox="0 0 24 24">
+      <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+    </svg>
+  </button>
+  <div class="project-images-container">
+    <img src="{{ '/assets/images/Mosh/IMG_6788.PNG' | relative_url }}" alt="Mosh app interface" />
+    <img src="{{ '/assets/images/Mosh/IMG_6789.PNG' | relative_url }}" alt="Mosh social features" />
+    <img src="{{ '/assets/images/Mosh/IMG_6790.PNG' | relative_url }}" alt="Mosh music recap" />
+    <img src="{{ '/assets/images/Mosh/IMG_6791.PNG' | relative_url }}" alt="Mosh AI posts" />
+    <img src="{{ '/assets/images/Mosh/IMG_6792.PNG' | relative_url }}" alt="Mosh music sharing" />
+    <img src="{{ '/assets/images/Mosh/IMG_6793.PNG' | relative_url }}" alt="Mosh user experience" />
+  </div>
+  <button class="carousel-nav next">
+    <svg viewBox="0 0 24 24">
+      <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+    </svg>
+  </button>
+</div>
+
+---
 ### MoonShroom
 *Technologies: Unity, C#*  
 *October - December 2024*
