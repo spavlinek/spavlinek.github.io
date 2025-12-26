@@ -18,7 +18,7 @@ This research explores how adaptive feedback, powered by AI and computer vision,
 
 I also analyzed conversational data using OpenAI's Whisper to extract insights about AI-assisted learning patterns and effectiveness of augmented reality games developed by NoriLLA. This research investigates how AI tools can better support educational outcomes by understanding natural language interactions between students, their parents and AI systems. Research paper is in the works!
 
-[Read our paper here →](https://doi.org/10.1007/s10956-025-10282-5)
+[Read our paper here →]({{ 'https://doi.org/10.1007/s10956-025-10282-5' | relative_url }})
 [Other NoRILLA Research →](https://www.norilla.com/research)
 
 <div class="project-images">

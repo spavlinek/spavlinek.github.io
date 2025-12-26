@@ -1714,7 +1714,7 @@ code, pre {
   font-weight: 500;
   font-size: 0.95rem;
   transition: color 0.2s ease;
-  display: inline-block;
+  display: block;
   margin-top: 0.5rem;
 }
 

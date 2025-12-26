@@ -49,6 +49,8 @@ Developed and designed this 2D platformer which follows an astronaut exploring a
 
 [Play on itch.io →](https://sarumangames.itch.io/moonshroom)
 
+[View on github →](https://github.com/spavlinek/MoonShroom)
+
 <div class="project-images">
   <button class="carousel-nav prev">
     <svg viewBox="0 0 24 24">

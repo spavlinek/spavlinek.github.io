@@ -159,6 +159,8 @@ layout: default
       
       <a href="https://sarumangames.itch.io/moonshroom" class="project-link" target="_blank" rel="noopener">Play on itch.io →</a>
       
+      <a href="https://github.com/spavlinek/MoonShroom" class="project-link" target="_blank" rel="noopener">View on github →</a>
+      
       <a href="/projects/game-design/" class="project-link">View More of My Game Design →</a>
       <div class="project-images">
         <button class="carousel-nav prev">
@@ -186,6 +188,7 @@ layout: default
       
       <p>NoRILLA is an augmented reality game with computer vision which improves children's STEM learning outcomes. The research explores how AI feedback enhances learning while increasing dialogue and collaboration between children and parents, which was analyzed using OpenAI's Whisper for conversation transcription.</p>
       
+      <a href="https://doi.org/10.1007/s10956-025-10282-5" class="project-link" target="_blank" rel="noopener">Read our paper here →</a>
       <a href="/projects/research/" class="project-link">View More of My Research →</a>
       <div class="project-images">
         <button class="carousel-nav prev">
