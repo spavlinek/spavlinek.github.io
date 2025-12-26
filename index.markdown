@@ -182,9 +182,9 @@ layout: default
 
     <div class="project-item">
       <h3>AI-Assisted Learning Research</h3>
-      <p class="project-subtitle">NoriLLA Research Position</p>
+      <p class="project-subtitle">NoriLLA Research and Development</p>
       
-      <p>Developing an augmented reality game with computer vision to improve children's STEM learning outcomes. The research explores how AI feedback enhances learning while increasing dialogue and collaboration between children and parents—analyzed using OpenAI's Whisper for conversation transcription.</p>
+      <p>NoRILLA is an augmented reality game with computer vision which improves children's STEM learning outcomes. The research explores how AI feedback enhances learning while increasing dialogue and collaboration between children and parents, which was analyzed using OpenAI's Whisper for conversation transcription.</p>
       
       <a href="/projects/research/" class="project-link">View More of My Research →</a>
       <div class="project-images">

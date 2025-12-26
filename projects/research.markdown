@@ -14,10 +14,11 @@ I am currently interested in studying the intersection of AI-assisted learning a
 ### AI-Assisted Learning
 *Institution: NoriLLA | Duration: June 2024 - Present*
 
-This research explores how adaptive feedback, powered by AI and computer vision, can enhance children’s science learning during real-world engineering construction activities. By providing real-time, personalized support, the system helps students better understand scientific concepts and apply them meaningfully while building. Research paper is in the works!
+This research explores how adaptive feedback, powered by AI and computer vision, can enhance children’s science learning during real-world engineering construction activities. By providing real-time, personalized support, the system helps students better understand scientific concepts and apply them meaningfully while building. You can read our paper on using NoRILLA to investigate how sequencing scientific inquiry activities before engineering activities encourages the transfer of scientific principles.
 
 I also analyzed conversational data using OpenAI's Whisper to extract insights about AI-assisted learning patterns and effectiveness of augmented reality games developed by NoriLLA. This research investigates how AI tools can better support educational outcomes by understanding natural language interactions between students, their parents and AI systems. Research paper is in the works!
 
+[Read our paper here →](https://doi.org/10.1007/s10956-025-10282-5)
 [Other NoRILLA Research →](https://www.norilla.com/research)
 
 <div class="project-images">
