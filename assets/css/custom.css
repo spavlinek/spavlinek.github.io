@@ -1860,96 +1860,18 @@ code, pre {
   }
 }
 
-/* ReactBits Target Cursor Styles */
-.target-cursor-wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  pointer-events: none;
-  z-index: 9999;
-  mix-blend-mode: difference;
-  transform: translate(-50%, -50%);
-}
-
-.target-cursor-dot {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 4px;
-  height: 4px;
-  background: #fff;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  will-change: transform;
-}
-
-.target-cursor-corner {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 12px;
-  height: 12px;
-  border: 3px solid #fff;
-  will-change: transform;
-}
-
-.corner-tl {
-  transform: translate(-150%, -150%);
-  border-right: none;
-  border-bottom: none;
-}
-
-.corner-tr {
-  transform: translate(50%, -150%);
-  border-left: none;
-  border-bottom: none;
-}
-
-.corner-br {
-  transform: translate(50%, 50%);
-  border-left: none;
-  border-top: none;
-}
-
-.corner-bl {
-  transform: translate(-150%, 50%);
-  border-right: none;
-  border-top: none;
-}
-
-/* Hide default cursor when target cursor is active */
-body.custom-cursor-active {
-  cursor: none;
-}
-
-body.custom-cursor-active a,
-body.custom-cursor-active button,
-body.custom-cursor-active .project-preview-item,
-body.custom-cursor-active .page-link {
-  cursor: none;
-}
-
-/* Projects Page Layout - Left-align headers and text */
-.page-content h2,
-.page-content p,
-.page-content > p > a {
+/* Projects Page - Left align text */
+[permalink="/projects/"] h2,
+[permalink="/projects/"] > p,
+.page[permalink="/projects/"] h2,
+.page[permalink="/projects/"] p:not(.project-preview-description) {
   text-align: left;
-  margin-left: 0;
-  margin-right: auto;
 }
 
-.page-content h2 {
-  font-size: 2rem;
-  margin-top: 3rem;
-  margin-bottom: 0.75rem;
-}
-
-/* Welcome text at top */
-.page-content > p:first-of-type {
+/* More specific selector for projects page */
+body .page-content h2,
+body .page-content > p {
   text-align: left;
-  margin-bottom: 2rem;
 }
 
 /* Project Preview Gallery Styles */

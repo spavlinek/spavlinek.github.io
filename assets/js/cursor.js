@@ -11,8 +11,9 @@
     hideDefaultCursor: true,
     hoverDuration: 0.2,
     parallaxOn: true,
-    borderWidth: 3,
-    cornerSize: 12
+    borderWidth: 2,
+    cornerSize: 8,
+    cornerOffset: 10  // Distance from center
   };
 
   // Check if mobile
@@ -100,10 +101,8 @@
     let activeStrength = { current: 0 };
     let spinTl = null;
 
-    // Initialize cursor position
+    // Initialize cursor position (no xPercent/yPercent, we handle centering in CSS)
     gsap.set(cursorWrapper, {
-      xPercent: -50,
-      yPercent: -50,
       x: window.innerWidth / 2,
       y: window.innerHeight / 2
     });
@@ -239,6 +238,7 @@
       const cursorX = gsap.getProperty(cursorWrapper, 'x');
       const cursorY = gsap.getProperty(cursorWrapper, 'y');
 
+      // Calculate corner positions relative to cursor
       targetCornerPositions = [
         { x: rect.left - config.borderWidth, y: rect.top - config.borderWidth },
         { x: rect.right + config.borderWidth - config.cornerSize, y: rect.top - config.borderWidth },
@@ -274,11 +274,12 @@
 
         if (corners) {
           gsap.killTweensOf(Array.from(corners));
+          const offset = config.cornerOffset;
           const positions = [
-            { x: -config.cornerSize * 1.5, y: -config.cornerSize * 1.5 },
-            { x: config.cornerSize * 0.5, y: -config.cornerSize * 1.5 },
-            { x: config.cornerSize * 0.5, y: config.cornerSize * 0.5 },
-            { x: -config.cornerSize * 1.5, y: config.cornerSize * 0.5 }
+            { x: -offset, y: -offset },
+            { x: offset, y: -offset },
+            { x: offset, y: offset },
+            { x: -offset, y: offset }
           ];
 
           const tl = gsap.timeline();
