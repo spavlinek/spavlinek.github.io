@@ -1866,9 +1866,18 @@ code, pre {
   max-width: none !important;
   padding-left: 2rem !important;
   padding-right: 2rem !important;
-  margin: 0 !important;
+  margin: 0 auto !important;
   width: 100% !important;
   box-sizing: border-box !important;
+}
+
+/* Debug: Add background to see alignment */
+.page-content:has(.project-preview-gallery) > h2 {
+  background: rgba(255, 0, 0, 0.1);
+}
+
+.page-content:has(.project-preview-gallery) > p {
+  background: rgba(0, 255, 0, 0.1);
 }
 
 /* Then, make the page content take full width */
