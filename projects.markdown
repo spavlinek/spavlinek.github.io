@@ -22,7 +22,7 @@ Explore my software, app development, and computer game projects.
     </div>
   </a>
   <a href="/projects/technical/#mosh---social-music-app" class="project-preview-item cursor-target">
-    <img src="{{ '/assets/images/Mosh/IMG_6789.PNG' | relative_url }}" alt="Mosh Social Music App" />
+    <img src="{{ '/assets/images/Mosh/IMG_6791.PNG' | relative_url }}" alt="Mosh Social Music App" />
     <div class="project-preview-content">
       <div class="project-preview-label">Mosh - Social Music App</div>
       <div class="project-preview-description">A social music app bringing friends together through shared music experiences and AI-generated posts.</div>
@@ -117,7 +117,7 @@ Explore my previous academic work and ongoing research projects.
     </div>
   </a>
   <a href="/projects/research/#simulated-facial-expression-generation" class="project-preview-item cursor-target">
-    <img src="{{ '/assets/images/face/Screenshot 2025-08-02 at 17.18.41.png' | relative_url }}" alt="Facial Expression Research" />
+    <img src="{{ '/assets/images/face/ezgif-43f48114e79780.gif' | relative_url }}" alt="Facial Expression Research" />
     <div class="project-preview-content">
       <div class="project-preview-label">Facial Expression Research</div>
       <div class="project-preview-description">Investigating robot feedback forms and their effects on human performance in fitness training contexts.</div>
