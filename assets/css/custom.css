@@ -1860,18 +1860,21 @@ code, pre {
   }
 }
 
-/* Projects Page - Left align text */
-[permalink="/projects/"] h2,
-[permalink="/projects/"] > p,
-.page[permalink="/projects/"] h2,
-.page[permalink="/projects/"] p:not(.project-preview-description) {
-  text-align: left;
+/* Projects Page Only - Left align text (using body class or URL-based targeting) */
+body[class*="projects"] .page-content h2,
+body[class*="projects"] .page-content > p,
+body[class*="projects"] .page-content > p > a,
+.page-content:has(.project-preview-gallery) h2,
+.page-content:has(.project-preview-gallery) > p,
+.page-content:has(.project-preview-gallery) > p > a {
+  text-align: left !important;
 }
 
-/* More specific selector for projects page */
-body .page-content h2,
-body .page-content > p {
-  text-align: left;
+/* Ensure index page sections stay centered */
+.main-content .section-title,
+.main-content .section-title h2,
+.main-content .featured-projects h3 {
+  text-align: center !important;
 }
 
 /* Project Preview Gallery Styles */
