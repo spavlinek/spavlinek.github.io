@@ -1913,9 +1913,10 @@ body[class*="permalink-projects"] .wrapper {
   max-width: none !important;
   margin-left: 0 !important;
   margin-right: 0 !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+  padding-left: 6rem !important;
+  padding-right: 6rem !important;
   text-align: left !important;
+  box-sizing: border-box !important;
 }
 
 .post:has(.project-preview-gallery) .post-content > *,
@@ -2078,7 +2079,8 @@ body[class*="projects"] .page-content > p > a,
 
 /* Responsive adjustments for project preview gallery */
 @media (max-width: 992px) {
-  .wrapper:has(.project-preview-gallery) {
+  .post:has(.project-preview-gallery) .post-content,
+  .post-content:has(.project-preview-gallery) {
     padding-left: 4rem !important;
     padding-right: 4rem !important;
   }
@@ -2092,7 +2094,8 @@ body[class*="projects"] .page-content > p > a,
 }
 
 @media (max-width: 768px) {
-  .wrapper:has(.project-preview-gallery) {
+  .post:has(.project-preview-gallery) .post-content,
+  .post-content:has(.project-preview-gallery) {
     padding-left: 3rem !important;
     padding-right: 3rem !important;
   }
@@ -2122,7 +2125,8 @@ body[class*="projects"] .page-content > p > a,
 }
 
 @media (max-width: 480px) {
-  .wrapper:has(.project-preview-gallery) {
+  .post:has(.project-preview-gallery) .post-content,
+  .post-content:has(.project-preview-gallery) {
     padding-left: 1.5rem !important;
     padding-right: 1.5rem !important;
   }
