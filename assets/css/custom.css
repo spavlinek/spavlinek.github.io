@@ -1860,13 +1860,74 @@ code, pre {
   }
 }
 
+/* Custom Target Cursor Styles */
+.custom-cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.15s ease, width 0.3s ease, height 0.3s ease, border-color 0.3s ease, opacity 0.3s ease;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.custom-cursor.visible {
+  opacity: 1;
+}
+
+.custom-cursor-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 10000;
+  transition: transform 0.1s ease, opacity 0.3s ease;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.custom-cursor-dot.visible {
+  opacity: 1;
+}
+
+.custom-cursor.hover {
+  width: 50px;
+  height: 50px;
+  border-color: var(--secondary-color);
+  background: rgba(65, 94, 189, 0.1);
+}
+
+.custom-cursor-dot.hover {
+  transform: translate(-50%, -50%) scale(0);
+}
+
+/* Hide default cursor on projects page */
+body.custom-cursor-active {
+  cursor: none;
+}
+
+body.custom-cursor-active a,
+body.custom-cursor-active button,
+body.custom-cursor-active .project-preview-item {
+  cursor: none;
+}
+
 /* Project Preview Gallery Styles */
 .project-preview-gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin: 2rem 0;
-  padding: 0;
+  padding: 2rem 4rem;
+  max-width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  box-sizing: border-box;
 }
 
 .project-preview-item {
@@ -1936,6 +1997,7 @@ code, pre {
   .project-preview-gallery {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
+    padding: 1.5rem 3rem;
   }
 }
 
@@ -1944,6 +2006,9 @@ code, pre {
     grid-template-columns: 1fr;
     gap: 1.5rem;
     margin: 1.5rem 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 1.5rem 1rem;
   }
   
   .project-preview-item img {
@@ -1966,6 +2031,7 @@ code, pre {
 @media (max-width: 480px) {
   .project-preview-gallery {
     gap: 1rem;
+    padding: 1rem 0.5rem;
   }
   
   .project-preview-item img {
