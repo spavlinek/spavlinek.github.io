@@ -1864,8 +1864,8 @@ code, pre {
 /* First, make the wrapper full width with comfortable padding */
 .wrapper:has(.project-preview-gallery) {
   max-width: none !important;
-  padding-left: 4rem !important;
-  padding-right: 4rem !important;
+  padding-left: 6rem !important;
+  padding-right: 6rem !important;
   margin: 0 auto !important;
   width: 100% !important;
   box-sizing: border-box !important;
@@ -2044,8 +2044,8 @@ body[class*="projects"] .page-content > p > a,
 /* Responsive adjustments for project preview gallery */
 @media (max-width: 992px) {
   .wrapper:has(.project-preview-gallery) {
-    padding-left: 3rem !important;
-    padding-right: 3rem !important;
+    padding-left: 4rem !important;
+    padding-right: 4rem !important;
   }
   
   .project-preview-gallery {
@@ -2058,8 +2058,8 @@ body[class*="projects"] .page-content > p > a,
 
 @media (max-width: 768px) {
   .wrapper:has(.project-preview-gallery) {
-    padding-left: 2rem !important;
-    padding-right: 2rem !important;
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
   }
   
   .project-preview-gallery {
@@ -2088,8 +2088,8 @@ body[class*="projects"] .page-content > p > a,
 
 @media (max-width: 480px) {
   .wrapper:has(.project-preview-gallery) {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
   }
   
   .project-preview-gallery {
