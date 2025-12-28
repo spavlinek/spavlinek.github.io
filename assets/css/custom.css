@@ -1860,15 +1860,56 @@ code, pre {
   }
 }
 
-/* Projects Page Only - Move everything to left edge with padding */
-/* First, make the wrapper full width with comfortable padding */
-.wrapper:has(.project-preview-gallery) {
+/* Projects Page Only - Add padding for readability */
+/* Target the wrapper on projects page */
+.wrapper:has(.project-preview-gallery),
+body[class*="page-projects"] .wrapper {
   max-width: none !important;
   padding-left: 6rem !important;
   padding-right: 6rem !important;
   margin: 0 auto !important;
   width: 100% !important;
   box-sizing: border-box !important;
+}
+
+/* Also target by permalink */
+body[class*="permalink-projects"] .wrapper {
+  max-width: none !important;
+  padding-left: 6rem !important;
+  padding-right: 6rem !important;
+  margin: 0 auto !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Direct targeting for /projects/ page */
+.page-content .project-preview-gallery {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Ensure wrapper has padding on projects index page */
+.project-preview-gallery ~ * {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Target the projects index wrapper directly */
+.projects-index-page {
+  padding-left: 6rem !important;
+  padding-right: 6rem !important;
+  box-sizing: border-box !important;
+}
+
+/* Override for page content containing projects index */
+.page-content:has(.projects-index-page) {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: 100% !important;
 }
 
 /* Override post-content and post-header centering */
