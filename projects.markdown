@@ -5,8 +5,6 @@ permalink: /projects/
 hide_title: true
 ---
 
-<div class="projects-index-page">
-
 Welcome to my projects portfolio! Here you'll find a collection of my projects across different domains.
 
 ## Technical projects
@@ -134,6 +132,5 @@ Explore my previous academic work and ongoing research projects.
   </a>
 </div>
 
-</div>
 
 ---

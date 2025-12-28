@@ -1896,15 +1896,9 @@ body[class*="permalink-projects"] .wrapper {
   padding-right: 0 !important;
 }
 
-/* Target the projects index wrapper directly */
-.projects-index-page {
-  padding-left: 6rem !important;
-  padding-right: 6rem !important;
-  box-sizing: border-box !important;
-}
-
-/* Override for page content containing projects index */
-.page-content:has(.projects-index-page) {
+/* Make sure page-content doesn't add its own padding */
+.page-content:has(.project-preview-gallery),
+.post-content:has(.project-preview-gallery) {
   padding-left: 0 !important;
   padding-right: 0 !important;
   margin-left: 0 !important;
