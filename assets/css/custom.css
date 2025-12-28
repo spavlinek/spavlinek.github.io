@@ -1860,60 +1860,74 @@ code, pre {
   }
 }
 
-/* Custom Target Cursor Styles */
-.custom-cursor {
-  width: 20px;
-  height: 20px;
-  border: 2px solid var(--primary-color);
-  border-radius: 50%;
+/* ReactBits Target Cursor Styles */
+.target-cursor-wrapper {
   position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
   pointer-events: none;
   z-index: 9999;
-  transition: transform 0.15s ease, width 0.3s ease, height 0.3s ease, border-color 0.3s ease, opacity 0.3s ease;
+  mix-blend-mode: difference;
   transform: translate(-50%, -50%);
-  opacity: 0;
 }
 
-.custom-cursor.visible {
-  opacity: 1;
-}
-
-.custom-cursor-dot {
-  width: 6px;
-  height: 6px;
-  background: var(--primary-color);
+.target-cursor-dot {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 4px;
+  height: 4px;
+  background: #fff;
   border-radius: 50%;
-  position: fixed;
-  pointer-events: none;
-  z-index: 10000;
-  transition: transform 0.1s ease, opacity 0.3s ease;
   transform: translate(-50%, -50%);
-  opacity: 0;
+  will-change: transform;
 }
 
-.custom-cursor-dot.visible {
-  opacity: 1;
+.target-cursor-corner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  border: 3px solid #fff;
+  will-change: transform;
 }
 
-.custom-cursor.hover {
-  width: 50px;
-  height: 50px;
-  border-color: var(--secondary-color);
-  background: rgba(65, 94, 189, 0.1);
+.corner-tl {
+  transform: translate(-150%, -150%);
+  border-right: none;
+  border-bottom: none;
 }
 
-.custom-cursor-dot.hover {
-  transform: translate(-50%, -50%) scale(0);
+.corner-tr {
+  transform: translate(50%, -150%);
+  border-left: none;
+  border-bottom: none;
 }
 
-/* Hide default cursor on projects page */
+.corner-br {
+  transform: translate(50%, 50%);
+  border-left: none;
+  border-top: none;
+}
+
+.corner-bl {
+  transform: translate(-150%, 50%);
+  border-right: none;
+  border-top: none;
+}
+
+/* Hide default cursor when target cursor is active */
 body.custom-cursor-active {
   cursor: none;
 }
 
 body.custom-cursor-active a,
 body.custom-cursor-active button,
-body.custom-cursor-active .project-preview-item {
+body.custom-cursor-active .project-preview-item,
+body.custom-cursor-active .page-link {
   cursor: none;
 }
 
