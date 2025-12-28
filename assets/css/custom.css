@@ -1931,6 +1931,27 @@ body.custom-cursor-active .page-link {
   cursor: none;
 }
 
+/* Projects Page Layout - Left-align headers and text */
+.page-content h2,
+.page-content p,
+.page-content > p > a {
+  text-align: left;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.page-content h2 {
+  font-size: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Welcome text at top */
+.page-content > p:first-of-type {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
 /* Project Preview Gallery Styles */
 .project-preview-gallery {
   display: grid;
