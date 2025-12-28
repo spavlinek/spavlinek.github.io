@@ -1886,19 +1886,47 @@ code, pre {
   padding-left: 0 !important;
   margin-right: 0 !important;
   padding-right: 0 !important;
+  text-align: left !important;
 }
 
 /* Override main container styles for projects page */
 .page-content:has(.project-preview-gallery) > p,
-.page-content:has(.project-preview-gallery) > h2 {
+.page-content:has(.project-preview-gallery) > h2,
+.page-content:has(.project-preview-gallery) > h1,
+.page-content:has(.project-preview-gallery) > h3,
+.page-content:has(.project-preview-gallery) > a {
   padding-left: 0 !important;
   margin-left: 0 !important;
+  text-align: left !important;
+  margin-right: auto !important;
+  max-width: 100% !important;
 }
 
+/* Force left alignment on all text elements in projects page */
+body[class*="page-projects"] .page-content h1,
+body[class*="page-projects"] .page-content h2,
+body[class*="page-projects"] .page-content h3,
+body[class*="page-projects"] .page-content p,
+body[class*="page-projects"] .page-content a {
+  text-align: left !important;
+}
+
+/* Target the specific page by permalink */
+[class*="page-projects"] .page-content > *:not(.project-preview-gallery) {
+  text-align: left !important;
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
+
+/* Override Jekyll centering for projects pages */
+body[class*="projects"] .page-content h1,
 body[class*="projects"] .page-content h2,
+body[class*="projects"] .page-content h3,
 body[class*="projects"] .page-content > p,
 body[class*="projects"] .page-content > p > a,
+.page-content:has(.project-preview-gallery) h1,
 .page-content:has(.project-preview-gallery) h2,
+.page-content:has(.project-preview-gallery) h3,
 .page-content:has(.project-preview-gallery) > p,
 .page-content:has(.project-preview-gallery) > p > a {
   text-align: left !important;
@@ -1906,6 +1934,7 @@ body[class*="projects"] .page-content > p > a,
   padding-left: 0 !important;
   padding-right: 0 !important;
   margin-left: 0 !important;
+  margin-right: auto !important;
 }
 
 /* Ensure index page section titles stay centered */
