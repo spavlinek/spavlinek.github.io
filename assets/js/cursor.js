@@ -2,6 +2,8 @@
 // Original: https://reactbits.dev/animations/target-cursor
 
 (function() {
+  console.log('Target Cursor: Script loaded');
+  
   // Configuration
   const config = {
     targetSelector: '.cursor-target, .project-preview-item, a, button',
@@ -23,21 +25,41 @@
     return (hasTouchScreen && isSmallScreen) || isMobileUserAgent;
   })();
 
-  // Only activate on projects page or pages with project galleries
-  const shouldActivate = document.querySelector('.project-preview-gallery') || 
-                         document.querySelector('.cursor-target');
+  console.log('Target Cursor: isMobile =', isMobile);
+  console.log('Target Cursor: Screen width =', window.innerWidth);
 
-  if (isMobile || !shouldActivate) {
+  if (isMobile) {
+    console.log('Target Cursor: Disabled (mobile device)');
     return;
+  }
+
+  // Wait for DOM to be ready before checking for elements
+  function checkActivation() {
+    const hasGallery = document.querySelector('.project-preview-gallery');
+    const hasTarget = document.querySelector('.cursor-target');
+    console.log('Target Cursor: Has gallery?', !!hasGallery);
+    console.log('Target Cursor: Has cursor-target?', !!hasTarget);
+    
+    return hasGallery || hasTarget;
   }
 
   // Wait for GSAP to load
   function initCursor() {
+    console.log('Target Cursor: initCursor called');
+    console.log('Target Cursor: GSAP available?', typeof gsap !== 'undefined');
+    
     if (typeof gsap === 'undefined') {
-      console.log('GSAP not loaded yet, retrying...');
+      console.log('Target Cursor: GSAP not loaded yet, retrying...');
       setTimeout(initCursor, 100);
       return;
     }
+
+    if (!checkActivation()) {
+      console.log('Target Cursor: No gallery or cursor-target elements found, not activating');
+      return;
+    }
+
+    console.log('Target Cursor: Initializing...');
 
     // Create cursor HTML
     const cursorHTML = `
@@ -51,14 +73,22 @@
     `;
     
     document.body.insertAdjacentHTML('beforeend', cursorHTML);
+    console.log('Target Cursor: HTML injected');
     
     const cursorWrapper = document.querySelector('.target-cursor-wrapper');
     const cursorDot = document.querySelector('.target-cursor-dot');
     const corners = document.querySelectorAll('.target-cursor-corner');
+    
+    console.log('Target Cursor: Elements found:', {
+      wrapper: !!cursorWrapper,
+      dot: !!cursorDot,
+      corners: corners.length
+    });
 
     // Hide default cursor
     if (config.hideDefaultCursor) {
       document.body.classList.add('custom-cursor-active');
+      console.log('Target Cursor: Default cursor hidden');
     }
 
     // State
@@ -92,6 +122,7 @@
     }
 
     createSpinTimeline();
+    console.log('Target Cursor: Spin animation started');
 
     // Move cursor
     function moveCursor(x, y) {
@@ -141,6 +172,7 @@
     window.addEventListener('mousemove', (e) => {
       moveCursor(e.clientX, e.clientY);
     });
+    console.log('Target Cursor: Event listeners attached');
 
     // Mouse down/up handlers
     window.addEventListener('mousedown', () => {
@@ -297,8 +329,12 @@
 
   // Initialize when DOM is ready
   if (document.readyState === 'loading') {
+    console.log('Target Cursor: Waiting for DOM...');
     document.addEventListener('DOMContentLoaded', initCursor);
   } else {
+    console.log('Target Cursor: DOM already loaded');
     initCursor();
   }
 })();
+
+console.log('Target Cursor: Script executed');
