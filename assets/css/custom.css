@@ -1929,7 +1929,7 @@ body[class*="projects"] .page-content > p > a,
 
 .project-preview-item img {
   width: 100%;
-  height: 280px;
+  height: 220px;
   object-fit: cover;
   transition: transform 0.3s ease;
   margin: 0;
@@ -1992,7 +1992,7 @@ body[class*="projects"] .page-content > p > a,
   }
   
   .project-preview-item img {
-    height: 240px;
+    height: 200px;
   }
   
   .project-preview-content {
@@ -2019,7 +2019,7 @@ body[class*="projects"] .page-content > p > a,
   }
   
   .project-preview-item img {
-    height: 200px;
+    height: 180px;
   }
   
   .project-preview-content {
