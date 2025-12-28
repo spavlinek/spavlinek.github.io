@@ -1871,13 +1871,24 @@ code, pre {
   box-sizing: border-box !important;
 }
 
-/* Debug: Add background to see alignment */
-.page-content:has(.project-preview-gallery) > h2 {
-  background: rgba(255, 0, 0, 0.1);
+/* Override post-content and post-header centering */
+.post:has(.project-preview-gallery) .post-content,
+.post:has(.project-preview-gallery) .post-header,
+.post-content:has(.project-preview-gallery) {
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  text-align: left !important;
 }
 
-.page-content:has(.project-preview-gallery) > p {
-  background: rgba(0, 255, 0, 0.1);
+.post:has(.project-preview-gallery) .post-content > *,
+.post-content:has(.project-preview-gallery) > * {
+  text-align: left !important;
+  margin-left: 0 !important;
+  margin-right: auto !important;
+  max-width: 100% !important;
 }
 
 /* Then, make the page content take full width */
