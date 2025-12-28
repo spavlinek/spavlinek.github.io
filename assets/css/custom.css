@@ -1862,8 +1862,8 @@ code, pre {
 
 /* Projects Page Only - Left align text at edge of page */
 .page-content:has(.project-preview-gallery) {
-  padding-left: 2rem !important;
-  padding-right: 0 !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
   margin-left: 0 !important;
   margin-right: 0 !important;
   max-width: 100% !important;
@@ -1882,6 +1882,13 @@ code, pre {
 .page-content:has(.project-preview-gallery) > * {
   margin-left: 0 !important;
   padding-left: 0 !important;
+}
+
+/* Override main container styles for projects page */
+.page-content:has(.project-preview-gallery) > p,
+.page-content:has(.project-preview-gallery) > h2 {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
 }
 
 body[class*="projects"] .page-content h2,
@@ -1913,8 +1920,8 @@ body[class*="projects"] .page-content > p > a,
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  margin: 2rem 0 2rem -2rem;
-  padding: 2rem 2rem 2rem 0;
+  margin: 2rem 0 2rem -1rem;
+  padding: 2rem 1rem 2rem 0;
   max-width: 100vw;
   width: 100vw;
   box-sizing: border-box;
@@ -1985,15 +1992,15 @@ body[class*="projects"] .page-content > p > a,
 /* Responsive adjustments for project preview gallery */
 @media (max-width: 992px) {
   .page-content:has(.project-preview-gallery) {
-    padding-left: 1.5rem !important;
-    padding-right: 0 !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
   }
   
   .project-preview-gallery {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
-    margin: 1.5rem 0 1.5rem -1.5rem;
-    padding: 1.5rem 1.5rem 1.5rem 0;
+    margin: 1.5rem 0 1.5rem -1rem;
+    padding: 1.5rem 1rem 1.5rem 0;
     max-width: 100vw;
     width: 100vw;
   }
@@ -2002,7 +2009,7 @@ body[class*="projects"] .page-content > p > a,
 @media (max-width: 768px) {
   .page-content:has(.project-preview-gallery) {
     padding-left: 1rem !important;
-    padding-right: 0 !important;
+    padding-right: 1rem !important;
   }
   
   .project-preview-gallery {
@@ -2033,14 +2040,14 @@ body[class*="projects"] .page-content > p > a,
 
 @media (max-width: 480px) {
   .page-content:has(.project-preview-gallery) {
-    padding-left: 0.5rem !important;
-    padding-right: 0 !important;
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
   }
   
   .project-preview-gallery {
     gap: 1rem;
-    margin: 1rem 0 1rem -0.5rem;
-    padding: 1rem 0.5rem 1rem 0;
+    margin: 1rem 0 1rem -0.75rem;
+    padding: 1rem 0.75rem 1rem 0;
     max-width: 100vw;
     width: 100vw;
   }
@@ -2071,4 +2078,323 @@ body[class*="projects"] .page-content > p > a,
 .single-project-image img:hover {
   transform: scale(1.02);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Bento Box Layout Styles */
+.bento-project {
+  margin: 3rem 0;
+  padding: 0;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  padding-left: 2rem;
+  padding-right: 2rem;
+  box-sizing: border-box;
+}
+
+.bento-project:nth-of-type(even) {
+  background: rgba(38, 88, 40, 0.04);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.bento-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.bento-box {
+  background: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 1.25rem;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.bento-box:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.bento-box h4 {
+  color: var(--primary-color);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 1rem 0;
+  opacity: 0.8;
+}
+
+.bento-box h3 {
+  color: var(--text-color);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+}
+
+.bento-box p {
+  color: var(--text-color);
+  line-height: 1.6;
+  margin: 0 0 0.75rem 0;
+  font-size: 0.95rem;
+}
+
+.bento-box ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: var(--text-color);
+  line-height: 1.8;
+}
+
+.bento-box li {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+/* Bento Box Size Variants */
+.bento-large {
+  grid-column: span 8;
+  grid-row: span 2;
+}
+
+.bento-medium {
+  grid-column: span 6;
+}
+
+.bento-medium-tall {
+  grid-column: span 6;
+  grid-row: span 2;
+}
+
+.bento-small {
+  grid-column: span 4;
+}
+
+.bento-small-tall {
+  grid-column: span 4;
+  grid-row: span 2;
+}
+
+.bento-full {
+  grid-column: span 12;
+}
+
+.bento-third {
+  grid-column: span 4;
+}
+
+/* Photo Gallery Bento Box */
+.bento-photos {
+  padding: 1rem;
+  background: var(--background-alt);
+}
+
+.bento-photos .project-images {
+  margin: 0;
+  position: relative;
+}
+
+.bento-photos .project-images-container {
+  display: flex;
+  gap: 0.75rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 0.5rem 0;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-color) transparent;
+}
+
+.bento-photos .project-images-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.bento-photos .project-images-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.bento-photos .project-images-container::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 3px;
+}
+
+.bento-photos .project-images-container img {
+  flex: 0 0 auto;
+  max-width: 250px;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.bento-photos .project-images-container img:hover {
+  transform: scale(1.05);
+}
+
+.bento-photos .carousel-nav {
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+}
+
+.bento-photos .carousel-nav.prev {
+  left: 0.5rem;
+}
+
+.bento-photos .carousel-nav.next {
+  right: 0.5rem;
+}
+
+/* Tag Styles in Bento Boxes */
+.bento-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.bento-tag {
+  background: rgba(38, 88, 40, 0.15);
+  color: var(--text-color);
+  padding: 0.375rem 0.875rem;
+  border-radius: 1.5rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  white-space: nowrap;
+  border: 1px solid rgba(38, 88, 40, 0.2);
+}
+
+/* Info Box Styles */
+.bento-info-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.bento-info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.bento-info-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-light);
+}
+
+.bento-info-value {
+  font-size: 0.95rem;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+/* Links in Bento Boxes */
+.bento-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.bento-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  padding: 0.5rem 0;
+}
+
+.bento-link:hover {
+  color: var(--secondary-color);
+  transform: translateX(4px);
+}
+
+.bento-link::after {
+  content: '→';
+  font-size: 1.1rem;
+}
+
+/* Responsive Bento Layout */
+@media (max-width: 1200px) {
+  .bento-large {
+    grid-column: span 12;
+    grid-row: span 1;
+  }
+  
+  .bento-medium,
+  .bento-medium-tall {
+    grid-column: span 6;
+    grid-row: span 1;
+  }
+  
+  .bento-small,
+  .bento-small-tall {
+    grid-column: span 6;
+    grid-row: span 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .bento-project {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .bento-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .bento-large,
+  .bento-medium,
+  .bento-medium-tall,
+  .bento-small,
+  .bento-small-tall,
+  .bento-third {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+  
+  .bento-box {
+    padding: 1.5rem;
+  }
+  
+  .bento-photos .project-images-container img {
+    max-width: 200px;
+    max-height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bento-project {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  
+  .bento-box {
+    padding: 1.25rem;
+  }
+  
+  .bento-box h3 {
+    font-size: 1.25rem;
+  }
 }
