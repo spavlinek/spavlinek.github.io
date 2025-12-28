@@ -1860,17 +1860,7 @@ code, pre {
   }
 }
 
-/* Projects Page Only - Left align text and match card padding */
-body[class*="projects"] .page-content,
-.page-content:has(.project-preview-gallery) {
-  max-width: 100vw !important;
-  margin-left: calc(-50vw + 50%) !important;
-  margin-right: calc(-50vw + 50%) !important;
-  padding-left: 4rem !important;
-  padding-right: 4rem !important;
-  box-sizing: border-box !important;
-}
-
+/* Projects Page Only - Left align text with matching padding */
 body[class*="projects"] .page-content h2,
 body[class*="projects"] .page-content > p,
 body[class*="projects"] .page-content > p > a,
@@ -1879,6 +1869,8 @@ body[class*="projects"] .page-content > p > a,
 .page-content:has(.project-preview-gallery) > p > a {
   text-align: left !important;
   max-width: none !important;
+  padding-left: 4rem !important;
+  padding-right: 4rem !important;
 }
 
 /* Ensure index page section titles stay centered */
@@ -1898,7 +1890,10 @@ body[class*="projects"] .page-content > p > a,
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin: 2rem 0;
-  padding: 2rem 0;
+  padding: 2rem 4rem;
+  max-width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
   box-sizing: border-box;
 }
 
@@ -1966,7 +1961,12 @@ body[class*="projects"] .page-content > p > a,
 
 /* Responsive adjustments for project preview gallery */
 @media (max-width: 992px) {
-  .page-content:has(.project-preview-gallery) {
+  body[class*="projects"] .page-content h2,
+  body[class*="projects"] .page-content > p,
+  body[class*="projects"] .page-content > p > a,
+  .page-content:has(.project-preview-gallery) h2,
+  .page-content:has(.project-preview-gallery) > p,
+  .page-content:has(.project-preview-gallery) > p > a {
     padding-left: 3rem !important;
     padding-right: 3rem !important;
   }
@@ -1974,21 +1974,28 @@ body[class*="projects"] .page-content > p > a,
   .project-preview-gallery {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
+    padding: 1.5rem 3rem;
   }
 }
 
 @media (max-width: 768px) {
-  .page-content:has(.project-preview-gallery) {
+  body[class*="projects"] .page-content h2,
+  body[class*="projects"] .page-content > p,
+  body[class*="projects"] .page-content > p > a,
+  .page-content:has(.project-preview-gallery) h2,
+  .page-content:has(.project-preview-gallery) > p,
+  .page-content:has(.project-preview-gallery) > p > a {
     padding-left: 1rem !important;
     padding-right: 1rem !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
   }
   
   .project-preview-gallery {
     grid-template-columns: 1fr;
     gap: 1.5rem;
     margin: 1.5rem 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 1.5rem 1rem;
   }
   
   .project-preview-item img {
@@ -2009,13 +2016,19 @@ body[class*="projects"] .page-content > p > a,
 }
 
 @media (max-width: 480px) {
-  .page-content:has(.project-preview-gallery) {
+  body[class*="projects"] .page-content h2,
+  body[class*="projects"] .page-content > p,
+  body[class*="projects"] .page-content > p > a,
+  .page-content:has(.project-preview-gallery) h2,
+  .page-content:has(.project-preview-gallery) > p,
+  .page-content:has(.project-preview-gallery) > p > a {
     padding-left: 0.5rem !important;
     padding-right: 0.5rem !important;
   }
   
   .project-preview-gallery {
     gap: 1rem;
+    padding: 1rem 0.5rem;
   }
   
   .project-preview-item img {
