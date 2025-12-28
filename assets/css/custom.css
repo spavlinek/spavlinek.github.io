@@ -1860,28 +1860,32 @@ code, pre {
   }
 }
 
-/* Projects Page Only - Left align text at edge of page */
-.page-content:has(.project-preview-gallery) {
-  padding-left: 1rem !important;
-  padding-right: 1rem !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  max-width: 100% !important;
+/* Projects Page Only - Move everything to left edge */
+/* First, make the wrapper full width and remove its padding */
+.wrapper:has(.project-preview-gallery) {
+  max-width: none !important;
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+  margin: 0 !important;
+  width: 100% !important;
   box-sizing: border-box !important;
 }
 
-/* Override wrapper constraints for projects page */
-.wrapper:has(.project-preview-gallery) {
-  max-width: 100% !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+/* Then, make the page content take full width */
+.page-content:has(.project-preview-gallery) {
+  padding: 0 !important;
   margin: 0 !important;
+  max-width: 100% !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
 }
 
 /* Ensure all direct children of page-content align to the left */
 .page-content:has(.project-preview-gallery) > * {
   margin-left: 0 !important;
   padding-left: 0 !important;
+  margin-right: 0 !important;
+  padding-right: 0 !important;
 }
 
 /* Override main container styles for projects page */
@@ -1920,10 +1924,9 @@ body[class*="projects"] .page-content > p > a,
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  margin: 2rem 0 2rem -1rem;
-  padding: 2rem 1rem 2rem 0;
-  max-width: 100vw;
-  width: 100vw;
+  margin: 2rem 0;
+  padding: 2rem 0;
+  width: 100%;
   box-sizing: border-box;
 }
 
@@ -1991,23 +1994,21 @@ body[class*="projects"] .page-content > p > a,
 
 /* Responsive adjustments for project preview gallery */
 @media (max-width: 992px) {
-  .page-content:has(.project-preview-gallery) {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
+  .wrapper:has(.project-preview-gallery) {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
   }
   
   .project-preview-gallery {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
-    margin: 1.5rem 0 1.5rem -1rem;
-    padding: 1.5rem 1rem 1.5rem 0;
-    max-width: 100vw;
-    width: 100vw;
+    margin: 1.5rem 0;
+    padding: 1.5rem 0;
   }
 }
 
 @media (max-width: 768px) {
-  .page-content:has(.project-preview-gallery) {
+  .wrapper:has(.project-preview-gallery) {
     padding-left: 1rem !important;
     padding-right: 1rem !important;
   }
@@ -2015,10 +2016,8 @@ body[class*="projects"] .page-content > p > a,
   .project-preview-gallery {
     grid-template-columns: 1fr;
     gap: 1.5rem;
-    margin: 1.5rem 0 1.5rem -1rem;
-    padding: 1.5rem 1rem 1.5rem 0;
-    max-width: 100vw;
-    width: 100vw;
+    margin: 1.5rem 0;
+    padding: 1.5rem 0;
   }
   
   .project-preview-item img {
@@ -2039,17 +2038,15 @@ body[class*="projects"] .page-content > p > a,
 }
 
 @media (max-width: 480px) {
-  .page-content:has(.project-preview-gallery) {
+  .wrapper:has(.project-preview-gallery) {
     padding-left: 0.75rem !important;
     padding-right: 0.75rem !important;
   }
   
   .project-preview-gallery {
     gap: 1rem;
-    margin: 1rem 0 1rem -0.75rem;
-    padding: 1rem 0.75rem 1rem 0;
-    max-width: 100vw;
-    width: 100vw;
+    margin: 1rem 0;
+    padding: 1rem 0;
   }
   
   .project-preview-item img {
