@@ -151,4 +151,62 @@ function initCarousels() {
 window.addEventListener('load', function() {
     console.log('Window loaded, re-initializing carousels...');
     setTimeout(initCarousels, 200);
+});
+
+// Scroll Animation for Project Cards
+document.addEventListener('DOMContentLoaded', function() {
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px 0px -100px 0px', // Trigger animation slightly before element is fully visible
+    threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Add animation class when element is visible
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        
+        // Stop observing once animated
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // Observe all project preview items
+  const projectItems = document.querySelectorAll('.project-preview-item');
+  projectItems.forEach((item, index) => {
+    // Set initial state
+    item.style.opacity = '0';
+    item.style.transform = 'translateY(30px)';
+    item.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+    
+    // Start observing
+    observer.observe(item);
+  });
+
+  // Also observe project preview galleries for staggered animation
+  const galleries = document.querySelectorAll('.project-preview-gallery');
+  galleries.forEach(gallery => {
+    const items = gallery.querySelectorAll('.project-preview-item');
+    
+    const galleryObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Animate all cards in the gallery with stagger
+          items.forEach((item, index) => {
+            setTimeout(() => {
+              item.style.opacity = '1';
+              item.style.transform = 'translateY(0)';
+            }, index * 100); // 100ms delay between each card
+          });
+          
+          galleryObserver.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+    
+    galleryObserver.observe(gallery);
+  });
 }); 
